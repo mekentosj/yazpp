@@ -1,0 +1,115 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. YAZ C++ API</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="prev" href="zoom-exception.html" title="6. ZOOM::exception and subclasses"><link rel="next" href="implementations.html" title="2. Implementations"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. YAZ C++ API</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="zoom-exception.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="implementations.html">Next</a></td></tr></table><hr></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="api"></a>Chapter 4. YAZ C++ API</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="api.html#interfaces">1. Interfaces</a></span></dt><dd><dl><dt><span class="section"><a href="api.html#ISocketObservable">1.1. ISocketObservable</a></span></dt><dt><span class="section"><a href="api.html#ISocketObserver">1.2. ISocketObserver</a></span></dt><dt><span class="section"><a href="api.html#IPDU_Observable">1.3. IPDU_Observable</a></span></dt><dt><span class="section"><a href="api.html#IPDU_Observer">1.4. IPDU_Observer</a></span></dt><dt><span class="section"><a href="api.html#query">1.5. Yaz_Query</a></span></dt></dl></dd><dt><span class="section"><a href="implementations.html">2. Implementations</a></span></dt><dd><dl><dt><span class="section"><a href="implementations.html#Yaz_SocketManager">2.1. Yaz_SocketManager</a></span></dt><dt><span class="section"><a href="implementations.html#PDU_Assoc">2.2. PDU_Assoc</a></span></dt><dt><span class="section"><a href="implementations.html#Z_Assoc">2.3. Z_Assoc</a></span></dt><dt><span class="section"><a href="implementations.html#IR_Assoc">2.4. IR_Assoc</a></span></dt><dt><span class="section"><a href="implementations.html#Z_Server">2.5. Z_Server</a></span></dt></dl></dd></dl></div><p>
+   The YAZ C++ API is an client - and server API that exposes
+   all YAZ features. The API doesn't hide YAZ C data structures, but
+   provides a set of useful high-level objects for creating clients -
+   and servers.
+  </p><p>
+   All definitions from YAZ++ are part of namespace
+   <code class="literal">yazpp_1</code>.
+  </p><p>
+   The following sections include a short description of the
+   interfaces and implementations (concrete classes).
+  </p><p>
+   In order to understand the structure, you should look at the
+   example client <code class="filename">yaz-my-client.cpp</code> and
+   the example server <code class="filename">yaz-my-server.cpp</code>.
+   If that is too easy, you can always turn to the implementation
+   of the proxy itself and send us a patch if you implement a new
+   useful feature.
+  </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+    The documentation here is very limited. We plan to enhance it -
+    provided there is interest for it.
+   </p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="interfaces"></a>1. Interfaces</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="ISocketObservable"></a>1.1. ISocketObservable</h3></div></div></div><p>
+     This interface is capable of observing sockets.
+     When a socket even occurs it invokes an object implementing the
+     <a class="link" href="api.html#ISocketObserver" title="1.2. ISocketObserver">ISocketObserver</a>
+     interface.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/socket-observer.h&gt;
+        
+     class my_socketobservable : public ISocketObservable {
+        // Add an observer interested in socket fd
+        virtual void addObserver(int fd, ISocketObserver *observer) = 0;
+        // Delete an observer
+        virtual void deleteObserver(ISocketObserver *observer) = 0;
+        // Delete all observers
+        virtual void deleteObservers() = 0;
+        // Specify the events that the observer is interested in.
+        virtual void maskObserver(ISocketObserver *observer,
+                                  int mask) = 0;
+        // Specify timeout
+        virtual void timeoutObserver(ISocketObserver *observer,
+                                     int timeout)=0;
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="ISocketObserver"></a>1.2. ISocketObserver</h3></div></div></div><p>
+     This interface is interested in socket events supporting
+     the <a class="link" href="api.html#ISocketObservable" title="1.1. ISocketObservable">ISocketObservable</a>
+     interface.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/socket-observer.h&gt;
+
+     class my_socketobserver : public ISocketObserver {
+         public:
+          // Notify the observer that something happened to socket
+          virtual void socketNotify(int event) = 0;
+     }
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="IPDU_Observable"></a>1.3. IPDU_Observable</h3></div></div></div><p>
+     This interface is is responsible for sending - and receiving PDUs over
+     the network (YAZ COMSTACK). When events occur, an instance
+     implementing <a class="link" href="api.html#IPDU_Observer" title="1.4. IPDU_Observer">IPDU_Observer</a>
+     is notified.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/pdu-observer.h&gt;
+
+     class my_pduobservable : public IPDU_Observable {
+       public:
+         // Send encoded PDU buffer of specified length
+         virtual int send_PDU(const char *buf, int len) = 0;
+         // Connect with server specified by addr.
+         virtual void connect(IPDU_Observer *observer,
+                     const char *addr) = 0;
+         // Listen on address addr.
+         virtual void listen(IPDU_Observer *observer, const char *addr)=0;
+         // Close connection
+         virtual void close() = 0;
+         // Make clone of this object using this interface
+         virtual IPDU_Observable *clone() = 0;
+         // Destroy completely
+         virtual void destroy() = 0;
+         // Set Idle Time
+         virtual void idleTime (int timeout) = 0;
+         // Get peername
+         virtual const char *getpeername() = 0;
+
+         virtual ~IPDU_Observable();
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="IPDU_Observer"></a>1.4. IPDU_Observer</h3></div></div></div><p>
+     This interface is interested in PDUs and using an object implementing
+     <a class="link" href="api.html#IPDU_Observable" title="1.3. IPDU_Observable">IPDU_Observable</a>.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/pdu-observer.h&gt;
+
+     class my_pduobserver : public IPDU_Observer {
+       public:
+         // A PDU has been received
+         virtual void recv_PDU(const char *buf, int len) = 0;
+         // Called when Iyaz_PDU_Observable::connect was successful.
+         virtual void connectNotify() = 0;
+         // Called whenever the connection was closed
+         virtual void failNotify() = 0;
+         // Called whenever there is a timeout
+         virtual void timeoutNotify() = 0;
+         // Make clone of observer using IPDU_Observable interface
+         virtual IPDU_Observer *sessionNotify(
+         IPDU_Observable *the_PDU_Observable, int fd) = 0;
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="query"></a>1.5. Yaz_Query</h3></div></div></div><p>
+     Abstract query.
+     </p><pre class="synopsis">
+     #include &lt;yazpp/query.h&gt;
+     class my_query : public Yaz_Query {
+       public:
+         // Print query in buffer described by str and len
+         virtual void print (char *str, int len) = 0;
+     };
+    </pre></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="zoom-exception.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="implementations.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">6. <code class="literal">ZOOM::exception</code> and subclasses </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 2. Implementations</td></tr></table></div></body></html>

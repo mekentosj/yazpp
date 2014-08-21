@@ -1,0 +1,3 @@
+libyaz_icu_la-icu_utf8.lo: icu_utf8.c ../include/config.h
+
+../include/config.h:

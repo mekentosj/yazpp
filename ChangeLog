@@ -1,0 +1,5116 @@
+commit c3474b64cdb1c5e03942f2397006208579f63a7e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Apr 19 08:06:45 2014 +0200
+
+    Version 1.6.0
+
+commit ba6cc0e7015b62b688209f5b71821051937b583a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Apr 19 08:02:34 2014 +0200
+
+    Require YAZ 5.1.0
+
+commit 9db3735fa68528436821b0349f5acc788f448492
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 10 16:17:55 2014 +0200
+
+    Use thread-safe rpn2cql and cql2rpn from YAZ YPP-14
+    
+    From YAZ-756.
+
+commit 3c714ed0d987533fedde0747836ac0f30fdd0b11
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 9 15:24:17 2014 +0200
+
+    allow RPN to CQL conversion with Yaz_cql2rpn class YPP-13
+
+commit 64579d7f330f966ed5dbd3af26f50507f0b86530
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Feb 7 13:12:30 2014 +0100
+
+    yazpp-config: quote some RHS values (that might include blanks)
+
+commit 82d0b6ce2accdbe9987d0b8b4e6e818514455e22
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 3 11:11:38 2014 +0100
+
+    Remove 'and Mike Taylor' clause from copyright
+    
+    For avoidance of doubt: I, Mike Taylor, being of sound mind, do hereby
+    irrevocably transfer my copyright in ZOOM C++, and any other parts of
+    YAZ that I contributed, to Index Data.
+
+commit d62e0baee8ee3cccced41746ef09fc3e01f401d5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 2 20:00:23 2014 +0100
+
+    Happy new year
+    
+    Omit copyright year range from most source files. We don't want to
+    update them every year anymore.
+
+commit dec6a549d4d6e374885d09ba9e178c0e825cf366
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Dec 10 10:44:13 2013 +0100
+
+    Add Debian jessie, Ubuntu raring+saucy
+
+commit 31f9c5ddc699d049fb201be9b5fd7c654a230482
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 14 15:16:16 2013 +0100
+
+    Version 1.5.2
+
+commit 6596c43a86a7627af223c30e67761fe373b79b77
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 14 15:15:33 2013 +0100
+
+    doc: remove prefix entity - not in use
+    
+    And it breaks our local0.ent / local.ent trick.
+
+commit d54b824ca309141da489284e5b6d78d7094f5494
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 14 14:18:52 2013 +0100
+
+    Make improved RecordCache::add YPP-10
+    
+    This will take a CompSpec as argument. We leave existing
+    RecordCache:add for now.
+
+commit 24e9fcd6b54f6d07db66d71743e9a71aaaf4a90f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 1 11:19:00 2013 +0100
+
+    Fix libyazpp6-dbg to depend on libyazpp6
+
+commit 09a9342d8cbcd388418b5840e43aceebf681a951
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 11:23:30 2013 +0100
+
+    Documentation rebuilt if local.ent changes
+
+commit 2afd521a806f8007b4a7acac4cb70d00b5c2520b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 29 19:40:20 2013 +0100
+
+    Version 1.5.1
+
+commit 6c6afc2c880abaf5ae19a5e7471e1bd149d1320c
+Merge: 805b4fd 5c95dd8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 29 18:11:47 2013 +0100
+
+    Merge branch 'master' of ssh://git.indexdata.com/home/git/pub/yazpp
+
+commit 5c95dd8965784197cdf753ae5a37dfd7695d8cae
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 29 15:10:25 2013 +0100
+
+    Sort conversion in az_cql2rpn::query_transform YPP-9
+
+commit 4cdabec84822b8b4f52907b6c69b3aedd199bf5a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 29 10:52:56 2013 +0100
+
+    query_transform: any size for PQF result + minor refactor
+
+commit 805b4fdf7b70b0e9b298064f24ceff0c1d38e05b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 5 16:28:12 2013 +0200
+
+    Add check for GDU type
+
+commit 3a9240aceaa70f89b0a6bba3769dc9a9c8f45f1b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 5 16:26:33 2013 +0200
+
+    GDU: if decode fails in assignment, reset m_gdu ptr
+    
+    This fixes a SEGV that could otherwise happen.
+
+commit 6872248ff51c18008f1335ca11dc2e9119abf787
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 5 16:10:08 2013 +0200
+
+    Rename tstquery to test_query
+
+commit 811aa170af425409aef732209f3052807e8af94d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 5 16:08:43 2013 +0200
+
+    tstquery using YAZ check
+
+commit 00dda24531b6b244132dba4481653b0a5565a231
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 4 13:01:22 2013 +0200
+
+    Version 1.5.0
+
+commit b6ee9e5e4706e4ccacf2e397a22940f6160131c3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 2 13:24:55 2013 +0200
+
+    Ignore debian/dirs produced
+
+commit c47fa91c9ec48e4ee7092631c643d80d80b965c1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 2 11:04:08 2013 +0200
+
+    Bump libzoompp so version to 6
+
+commit cead263329884aba5e14185297b10ea822d3643a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 2 10:20:47 2013 +0200
+
+    Bump so/DLL to major version 6 and use YAZ 5
+
+commit 059d1ebe37f4c1ab1496d8c68db5ac35d9047c7a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 1 16:19:34 2013 +0200
+
+    New pkg libyazpp6 using libyaz5
+
+commit 703a05988ba7d2085d1198440a60a601f8a3904c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 1 16:13:08 2013 +0200
+
+    Update to debhelper version 7
+
+commit 6fbe632bc43d693756170e5b799c942d6abbf883
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 11 10:52:35 2013 +0200
+
+    Add unsigned char cast for YAZ 4
+
+commit 32a5aaaa9a78f9ee028090496a85c3aa8526ea27
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 11 10:26:42 2013 +0200
+
+    Use odr_create_Odr_oct
+    
+    and make yazpp work with both YAZ 4 and YAZ 5.
+
+commit 62306a138a939c29b2f507af2d0d43de0a7689ad
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 12 15:42:07 2013 +0200
+
+    No longer build for Ubuntu natty
+
+commit 1f342ea4ef1128240f7830cc6055333aa1afbb47
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 3 12:36:57 2013 +0200
+
+    Version 1.4.1
+
+commit 491897e82f5033fcdce789ec3d33710f3b20fcc6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 3 12:36:50 2013 +0200
+
+    Rephrase on GCC
+
+commit 32dbbdd74077dc4f32f32ba40bfbb71f3649d440
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 3 12:31:05 2013 +0200
+
+    Update names for DLLs in doc
+
+commit 4ea3339bc02cb0d589950cef98083118ab2ad96f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 3 11:32:11 2013 +0200
+
+    Update NEWS
+
+commit 9ba43fac17a3f6c9df4412ef06f69092eacad74a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 3 11:20:34 2013 +0200
+
+    Allow cert fname to be given for PDU_Assoc YAZPP-7
+    
+    Thus allowing a SSL/HTTPS server role.
+
+commit 4e47c05eeeee2932d465768bba893089e67987a6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Apr 22 17:25:21 2013 +0200
+
+    Debug package libyazpp5-dbg. YPP-6
+
+commit 5e7e61948e723e5ed2251d67eb0b9579220192d4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 19 12:19:48 2013 +0100
+
+    RPM: simplify make install rule
+
+commit 217e153abe5e9c5aae6ef74a839bf01d30e295d3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Jan 6 16:32:46 2013 +0100
+
+    Bump year
+
+commit 1687643395adabdc7fc1fd7a31045a8bf2251264
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 29 09:59:15 2012 +0100
+
+    Add Ubuntu quantal
+
+commit 562ea2b80ffd1bd24aa6b6250b5b9dd61f3e468d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 13 14:42:10 2012 +0100
+
+    Pimpl LimitConnect class
+
+commit 01ad980e5595816d57bc9aa6aa451914b6fd2d33
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 13 14:38:30 2012 +0100
+
+    Pimpl TimeStat class
+
+commit 6f3834da6184bd3c38812c1b3f30e8c9d287d887
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 13 10:06:32 2012 +0100
+
+    Update NEWS WRT yazpp-config change
+
+commit 1b4dda7089ed55b646a81b6a54355c647b2ac238
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 13 10:04:56 2012 +0100
+
+    yazpp-config daels with zoom for in-source
+
+commit 1cb536dd1b957944a6f545286c8fafa2352f027b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 13 10:00:35 2012 +0100
+
+    Bump to SO version 5 for zoom lib
+
+commit 483614f9082a89e570f5cd0a5a67606921a78f1f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:58:32 2012 +0100
+
+    Add missing install files for Debian package
+
+commit da5e82516b0b66ec65e6af4779f2fdbf29d42e5e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:57:31 2012 +0100
+
+    Bump to SO version 5, towards 1.4.0
+
+commit 7b4959299d464305c7f9c3782d8131ee40060f55
+Merge: fcb05f8 f54a891
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:47:11 2012 +0100
+
+    Merge branch 'master' of ssh://git.indexdata.com:222/home/git/pub/yazpp
+
+commit fcb05f8f136a24e8ed36ec9d7a5d2f6c817f1bbb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:47:00 2012 +0100
+
+    Generate yazpp5 dll
+
+commit f54a8916ca6047b539ec1cd2001b51de689ed710
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:43:04 2012 +0100
+
+    Define destructor for PDU_AssocThread
+
+commit 51d68e30cd2aea2ec189bee63378744a6bcf9ca5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:04:46 2012 +0100
+
+    Pimpl RecordCache class
+
+commit 73c9f3dfff68f316750bcd87b044e0d636d5070f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:50:35 2012 +0100
+
+    Further trims of SocketManager class
+
+commit 37a894d52dcd595033b719cff476b77b1dfe81d1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:49:17 2012 +0100
+
+    More files to ignore
+
+commit 7c884670db16993b0fe9a0169fd27754572b5291
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:46:50 2012 +0100
+
+    Ignore yazpp-config.1
+
+commit 747b7d6d88367280441801e31a8387c4f224dcea
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:33:39 2012 +0100
+
+    Pimpl SocketManager class
+
+commit dd9243da4f0b0732e655d13c41e228f03c73879d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 10:52:24 2012 +0100
+
+    Pimpl Yaz_Z_Query class
+
+commit be1e73ac6baf74b1522837a4faa321a950b8ba26
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 15:38:25 2012 +0100
+
+    New PDU_Assoc method get_comstack
+    
+    Allows us to change COMSTACK settings, such as max_recv_bytes.
+
+commit 1712037ea49f815f10b68b4231dca7a91802ff04
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 15:29:02 2012 +0100
+
+    PDU_Assoc: comstack helper method to priv
+    
+    Also re-order methods in PDU_Assoc a bit to make it clearer WRT
+    categories.
+
+commit cd57d092689576508ec75cec0b837cbee83cd141
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 14:15:11 2012 +0100
+
+    Pimpl Z_Assoc class
+
+commit bedf8fd2207fdfe7b666377a29a5761f90b064b8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 14:14:54 2012 +0100
+
+    Make PDU_Assoc_priv members private
+
+commit db245a81abf7ad888e4b3829d703b69a4c30e414
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 14:14:15 2012 +0100
+
+    Remove redundant comment
+
+commit e1563004f70ed8be4549db0ba3a20de902f98d4c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 13:22:49 2012 +0100
+
+    Pimpl PDU_Assoc class
+
+commit 8e10589d8533b373d6bb95d5dc74678b65a9740f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 13:22:43 2012 +0100
+
+    Remove two obsolete Doxygen settings
+
+commit 7f59706062e3c412d5d2ebc6ae3fd6a9f4173494
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 8 15:22:31 2012 +0100
+
+    Add missing YAZLALIB for zoom programs
+
+commit c7b0a2dab46c3eae9f2a80b049a3d6cc86cc4a9b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 8 15:10:32 2012 +0100
+
+    yazpp-config no longer returns zoom library by default
+    
+    The yazpp-config command no longer returns -lzoompp by default.
+    Only if "zoom" is passed to yazpp-config it is returned.
+
+commit 9b9ffe1bf48e645ec7a62acd8022a90f6e3a60af
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 8 14:51:06 2012 +0100
+
+    Reformat. Add Emacs local variables
+
+commit 53d173adf3fb13f5fd25a7b02f339e2731d8a834
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 26 10:53:17 2012 +0200
+
+    Version 1.3.3
+
+commit 6b50fe651b6f6e83f4bfa9c4f00a793a40ed423c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 22 21:16:58 2012 +0200
+
+    Update zlint for new z-assoc/pdu-assoc behavior
+    
+    In particular failNotify is now called on Z_Assoc::close .
+
+commit 10c10dc81402e616b22c536f5b06d9471330c608
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 22 19:28:37 2012 +0200
+
+    Remove code for unused local var
+
+commit d0932dbb88b21a67977143d059ec7832a75d1fc3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 19 14:46:52 2012 +0200
+
+    Use dpkg-buildflags in build process
+    
+    This is to use hardening options for the libraries and programs.
+    Refer to http://wiki.debian.org/Hardening for more information.
+
+commit 7ec50e958b71afa96795530d9491af538174e0a7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 19 14:46:41 2012 +0200
+
+    debian: devel => libdevel
+
+commit b33bc28aad7b21ae5c4e676bf7c65734ba522674
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 19 14:38:37 2012 +0200
+
+    Remove useless lines from rules
+
+commit 711105a336b155f2b7f098cf84f2e30952cb8588
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 19 15:38:03 2012 +0200
+
+    Reformat: delete trailing whitespace
+
+commit b56e6a2a7d6b37a72e3be0973747feb977f82a70
+Merge: ea523ea c0d2972
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 21 14:43:26 2012 +0200
+
+    Merge branch 'master' of ssh://git.indexdata.com/home/git/pub/yazpp
+
+commit ea523ea129c8c2192569c41cb28fa10c40e7ae8c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 21 14:43:17 2012 +0200
+
+    Update m4
+
+commit c0d29728853563098ff374b240a5b0042d97fb74
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 20 18:22:26 2012 +0200
+
+    Version 1.3.2
+
+commit 0cbdc649960cd1072c1b8c5fa244a1f071d23cdb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 20 16:33:07 2012 +0200
+
+    PDU_Assoc: Fix missing close if session is dead
+    
+    When queue is flushed and session is daed, close session. Fixes
+    a problem with missing close in HTTP 1.0 - no keepalive mode.
+
+commit 4be4867e8da58059d33f606e070d9fd3da323076
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 7 13:41:29 2012 +0200
+
+    Use m4/id-config.sh
+
+commit 4d3b9a43fd1dde68bdc4972abee7c4d2f837010a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 6 12:54:22 2012 +0200
+
+    DH compat 5
+
+commit 5932b7f1308ff2173bb7865295dca54313219458
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jul 3 13:41:21 2012 +0200
+
+    Version 1.3.1
+
+commit b44e3f59721a74d2c99a7bac337114f677564b99
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jul 2 15:51:10 2012 +0200
+
+    SocketManager::processEvent returns 1 on EINTR
+    
+    This changes behavior a bit, but ensures that it returns if
+    we receive a signal.
+
+commit 6766700fe6f7f01a04c56d659b09f2a5098cbfb6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 1 12:21:37 2012 +0200
+
+    Build for Ubuntu precise, no build for maverick
+
+commit 4abdce174c8a101e84d7014f863ac0f442d78c3b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 25 12:33:33 2012 +0200
+
+    Version 1.3.0
+
+commit 1d58071894904fae50f6c577963dbfd4c9b83062
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 25 12:25:43 2012 +0200
+
+    SocketManager deals with observers being lost during poll
+
+commit 11189d6e01308c7326d8a2c091e61bb79ba38d08
+Merge: 5dddeb7 e3dbcaf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 24 14:40:26 2012 +0200
+
+    Merge branch 'master' into graceful_stop
+
+commit e3dbcafe1fcd29d98138b20dc82e8fc4e80d66d0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 24 14:28:58 2012 +0200
+
+    Do not build for Debian lenny anymore
+
+commit 5dddeb732a1409f9787cbdb3ce993f73a47f2dcc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 17 14:45:32 2012 +0200
+
+    Add SocketManager::getNumberOfObservers
+    
+    Returns number of observers.
+
+commit 70976d316a4bf21f689d2982a362b4acb9d0273f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 10 13:44:06 2012 +0200
+
+    Beginnings of graceful stop
+
+commit 14f8e7a8011c30a43cfe1220cfecab063479adb4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Feb 17 15:32:15 2012 +0100
+
+    Update doc/common
+
+commit 6716ec7295c7361a205cb2dbcd5c8e3af64e8df6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 2 14:09:29 2012 +0100
+
+    Update version in NEWS
+
+commit eabbf3fa73f3b7f5b5d01e1525da2d4905a4bbc9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 2 13:59:12 2012 +0100
+
+    Version 1.2.8
+
+commit d021e2044b36127a998108dba8b03c07e32ebd83
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 2 13:59:05 2012 +0100
+
+    Bump copyright year
+
+commit 8877957e36c071ca8f533f4411cbf12328d820cd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 2 13:56:38 2012 +0100
+
+    Document changes
+
+commit bed85d2160500f57db63f4ab9d5533e0225cce15
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 23 12:49:38 2012 +0100
+
+    Log up to 1K of buffer content if decoding fails
+
+commit e661675e0358c69a91c16e8a4e00dafbea1fabf9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 19 14:43:26 2012 +0100
+
+    PDU decode failure: log lead bytes and PDU size
+
+commit 8fd53b0694e21f4d287a123daad5d99ce2243c70
+Merge: 0084c40 462018a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 11 12:22:49 2012 +0100
+
+    Merge branch 'master' of ssh://git.indexdata.com/home/git/pub/yazpp
+
+commit 0084c40d8bc6babaeb0b833b12d9cd625c807525
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 11 12:22:44 2012 +0100
+
+    Happy new year
+
+commit 462018a97a5ea237983be1804cdb5b7e162726a8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 25 14:32:46 2011 +0100
+
+    buildconf removes autom4te.cache
+    
+    This is to ensure that software version is not cached but taken
+    from IDMETA as it should.
+
+commit 755294703366636fb54eea1ca3371cdcfe9a25c0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Nov 23 21:33:00 2011 +0100
+
+    Remove Ubuntu karmic from build
+
+commit fc771cee3f81e165d323053ff95d4f776d26986a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 15 10:23:43 2011 +0100
+
+    RPM: get version from IDMETA
+    
+    So we don't need to update the spec file for each release anymore.
+
+commit eb27dfba785f4a50d523e89db98c2060428cee03
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 15 10:23:13 2011 +0100
+
+    IDMETA part of dist
+
+commit e9c4133f031ccad3a9c0af5fa86494aa4196fb10
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 15 10:22:33 2011 +0100
+
+    Read version from IDMETA rather than configure.ac.
+    
+    In other words, configure.ac gets its version from IDMETA.
+
+commit ad324c2b8432a66ae2fdb9d2cce2456108d61065
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 10 12:48:41 2011 +0100
+
+    Update m4
+
+commit 616b106aafc7f5cf6a838ab73dd8f6ddc4f14513
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Aug 12 10:19:57 2011 +0200
+
+    Version 1.2.7
+
+commit d1d609939256610d8f1da0253642a07b8c709146
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 20 10:23:20 2011 +0200
+
+    Version 1.2.6
+
+commit d1010e2fab0026b538230f67293bd5d4724c0913
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 25 15:20:18 2011 +0200
+
+    Update configure to generate config.h
+
+commit 8811541246ae94792b32d9468d22c410f0dea5f2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon May 16 13:45:08 2011 +0200
+
+    buildconf.sh: update package list for compiling with sources
+
+commit 1d171b00d0f26236774424d63b6a34231b730c93
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 6 09:12:52 2011 +0000
+
+    Version 1.2.5
+
+commit a60c186e884b033ed25db9cd5775d72272e4b3d6
+Merge: acdce5b 29388f5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 29 11:26:48 2011 +0000
+
+    Merge branch 'master' of ssh://git.indexdata.com/home/git/pub/yazpp
+    
+    Conflicts:
+    	IDMETA
+
+commit acdce5b5ec7ecd6208258923a0e44bd34c12d01f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 29 11:23:08 2011 +0000
+
+    Add Debian wheezy, Ubuntu natty
+    
+    Remove Ubuntu jaunty, Ubuntu intrepid, Ubuntu hardy.
+
+commit 29388f5e9e3bd4bb5f0e375cdc560869be840d86
+Author: Wolfram Schneider <wosch@indexdata.dk>
+Date:   Sat Feb 19 13:14:10 2011 +0100
+
+    sync FreeBSD updates from yaz/buildconf.sh
+
+commit 563f0870fd8b98f66c5e1abcc4683d29368c1491
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 27 13:31:19 2011 +0100
+
+    Version 1.2.4
+
+commit 208308db3af0bac7f98140122e0986859db1e95e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 27 13:30:50 2011 +0100
+
+    Upd links in README
+
+commit 1f98fb9df788152e5fc66c30c189a489aea5f052
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 27 10:46:09 2011 +0100
+
+    RPM: Release includes 'indexdata' name
+    
+    Use indexdata in release name so this package can be distinguished
+    from other vendors.
+
+commit 8353663886b90d762d43790780be6cb58fb93c8a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 7 11:23:34 2011 +0100
+
+    Happy new year
+
+commit 3fe55772b5d9928f9f60bc1489af585230a34173
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 4 14:06:39 2011 +0100
+
+    RPM: make it relocatable
+
+commit e617f5930760f14b865ae62750b5e9ff422d3be0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 23 11:16:39 2010 +0100
+
+    Update m4
+
+commit c3690905ad1433956660f0734dae05d800f86eee
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Dec 22 14:59:19 2010 +0100
+
+    yazpp.spec not generated by configure
+    
+    yazpp.spec.in gone.
+
+commit 89722b8558e29bc0cbe6e37337ad4774f34cab55
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Dec 22 14:51:55 2010 +0100
+
+    yazpp-config: Use exec_prefix, libdir, includedir
+    
+    Use these variables as determined by configure
+
+commit 6ed8b4a91ed92d8b7d31618b845be1b3dcbff15f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 9 13:11:29 2010 +0100
+
+    RPM 1.2.3-2. Depend on YAZ 4.1.0
+
+commit 318a8ebb0f9def879cc18289cb9a914cbf1937b7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 26 20:11:46 2010 +0200
+
+    buildconf.sh -d: use --with-pic
+
+commit 8a79606ce89093abdd763c2b735be970d6a00ca9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 15 14:50:03 2010 +0200
+
+    Add Ubuntu maverick
+
+commit f1a65f18ee83641504e59a32cf2fad04d6136df9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 6 13:04:26 2010 +0200
+
+    Fix up echo_source correctly
+
+commit b094fb084d6ccabc92560830fb3c84285508a15f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 6 13:02:21 2010 +0200
+
+    Doc: DB 4.4. Move yazpp-config man to section 1
+
+commit d186092a74d767a2e1be5e9db685b41ce8f76936
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 15 10:52:41 2010 +0200
+
+    Simplify yazpp-config a bit
+    
+    src_root, build_root values can be taken from automake value.
+
+commit 6089bdf9405e547668eb2cb6b0035bf05bbbee91
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 8 20:26:08 2010 +0200
+
+    RPM: call ldconfig for libyazpp pkg
+
+commit bfb8c70dcd6e96938c122d0d611e7994d738961a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 8 20:24:31 2010 +0200
+
+    Fix yaz++ URL
+
+commit 5d171d11df74bbbb9d6e909c301aa5cf67b166ef
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 30 15:22:01 2010 +0200
+
+    Remove etch, jaunty, intrepid, hardy
+
+commit b16489952e696a5fcaad3f83c553d671f085b9be
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 15 14:49:58 2010 +0200
+
+    Version 1.2.3
+
+commit 248fffea9344e4e259d4d5fe357f41e9f9877fab
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 19 15:55:02 2010 +0200
+
+    Win makefile: omit /machine:i386 option
+
+commit d75c2e063a41df9f72db0263596c1c1e69b5979f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon May 17 13:44:57 2010 +0200
+
+    RPM: Remove *.la from install
+
+commit e422756598cb98cce75526e618d599649215c581
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon May 17 12:43:02 2010 +0200
+
+    libyaz.la is used by libzoompp.la
+
+commit 60ffe41830258a57570a5a0d03d76a158a5b7d3b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 12 14:32:06 2010 +0200
+
+    Remove *.la files.
+    
+    http://wiki.debian.org/ReleaseGoals/LAFileRemoval
+
+commit 05d08fe1d202be86bf4fff157c0e9e2f0ac13171
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 11 13:45:10 2010 +0200
+
+    Update news WRT YAZ.
+
+commit 7cc95304620516ad4415e1c50bf6308cc1c913fa
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 11 13:44:27 2010 +0200
+
+    Require YAZ 4.0.8 (4.0.7 libgnutls-dev dep problem)
+
+commit 21aedc42ce24e35a1f82a6f009ed9ef6fca45ff2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 11 11:46:06 2010 +0200
+
+    Update m4
+
+commit 94cb331a94c20bc0c263821b51d88875a145b89a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 11 11:45:39 2010 +0200
+
+    Add IDMETA
+
+commit 2ee92275c00739de18b39c7d2f5ea87d2a67acc5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 11 10:54:48 2010 +0200
+
+    Version 1.2.2
+
+commit b6131942246f587188208dd9df6f5332839101d2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 17 15:00:29 2010 +0100
+
+    Apply FD_CLOEXEC on listening socket
+    
+    Use fcntl on listening socket to ensure it gets closed in case any
+    server ever execs. There is no need for a child to listen and keep
+    the port occupied.
+
+commit 7b5541d7399501f0d6f35cc754bfbdc899df7a81
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 28 10:36:27 2010 +0100
+
+    Bump version to 1.2.1. Depend on YAZ 4.0.1
+
+commit 6a00643ac9015c73b89a18b656210116a3a9bd01
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 20 11:05:50 2010 +0100
+
+    Update news
+
+commit e4fc20414e146a46c5a7bf013ed50a7e88c01c37
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 20 10:54:12 2010 +0100
+
+    Bump version to 1.2.0
+
+commit 8007a580acd6376da58647f232e1955d3ab0c07a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 20 10:48:38 2010 +0100
+
+    Update pkg names in RPM
+
+commit 0385b7ce90672bff6de1548c45769c196ef0b1b8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 19 22:40:26 2010 +0100
+
+    Remove unmaintained VC project files
+
+commit a4007b6e1bc3014db1d9b8313fdd55485feabb44
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 19 22:40:23 2010 +0100
+
+    Using manifest by default
+
+commit 39561cea5df4bbe45828609bfda594d657664dfd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 14 16:13:56 2010 +0100
+
+    Update m4
+
+commit 3cf85321afbedebddfc8b4aebe1b4a038d100d17
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 14 13:12:25 2010 +0100
+
+    libyazpp.so depends on libyaz.so
+
+commit 1e20b137d14621dedf159d26c5d06b4318965d66
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 14 13:04:25 2010 +0100
+
+    RecordCache: set_max_size takes size_t
+
+commit d53e0ff85ad63de947da013a0d25a434d12eed40
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 14 13:03:04 2010 +0100
+
+    Bump copyright year
+
+commit 2fe227691983ad6fa22165b37d0be4ef4e885e2a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:30:56 2010 +0100
+
+    Bump libzoomcpp to .so version 4
+
+commit 11c4cf0497855c65bb50f682b763ef8b474b41b0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:22:09 2010 +0100
+
+    Update so version to 4
+
+commit 16ee0303c65ffd38a5eca1e3251da46d5d225bc7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:17:30 2010 +0100
+
+    Update dh_makeshlibs for yaz4
+
+commit 63f862f9c9f5884b12dc24b254662833389c03ab
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:07:33 2010 +0100
+
+    Debian update for yaz4
+
+commit 9d63c06ce62ef5fa32a9b2238f1e132b8ab07303
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:07:11 2010 +0100
+
+    RPM update for yaz4
+
+commit 94971c9b5d09e3d8701ba43e9cca8168bc668e53
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 16:05:53 2010 +0100
+
+    Use YAZ4 DLL
+
+commit b217549fd1effa4467ac57a9e7510d75d7b8c446
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 13 13:47:47 2010 +0100
+
+    Do not use old Z_PRES-defines
+
+commit a5fe36a7faa841fe44b2b12757d339fc13ac1997
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 3 09:42:30 2009 +0100
+
+    Version 1.1.6
+
+commit b8e64d193b1b4f3197cb0c1db2f8d097e67cd50a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Dec 1 21:42:00 2009 +0100
+
+    Update to use Odr_int
+
+commit 42f5f787566c86490724a6f4166ff4196f057ad8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 19 18:06:26 2009 +0100
+
+    Remove DETAILS_AT_TOP (Doxygen)
+
+commit fc466cc6ffe219410d74d99c01b8cb2b9307c250
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 19 14:21:26 2009 +0100
+
+    version 1.1.5
+
+commit 5b172c484238c964c547e7e45fb3c836f2d66fe5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 16 13:58:51 2009 +0200
+
+    Fix install doc rule for Automake 1.11
+
+commit 6ef0865af923965680547123856185d71f3e85ff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 10 17:59:59 2009 +0200
+
+    Update to new ID URLs
+
+commit 5e3a95f85de9d35a4f3f38ece2ed35176a86bb2f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 8 15:55:02 2009 +0200
+
+    No longer needed .gitignore
+
+commit d48895bb53b32e7954ef5052e683adfa34e9c354
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 8 15:48:58 2009 +0200
+
+    Remove unused Makefile
+
+commit f82c343b88a45951ee8e7471e7c8bb2015b11b84
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 8 14:40:10 2009 +0200
+
+    Add newline to libyazpp3-dev.install
+
+commit 2604df665a484a7f11f89ce0ceb74b4280720beb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 8 14:38:03 2009 +0200
+
+    Version 1.1.4. Depend on YAZ 3.0.47
+
+commit 6e45aa5d01427a84dc532b72eb2b8089b7ee89ac
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 30 13:27:08 2009 +0200
+
+    Version 1.1.3 (Debian)
+
+commit 80f76096e4a83eeeb66ea55ef0d526b1f360a10c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 30 13:26:24 2009 +0200
+
+    News for 1.1.3
+
+commit 1e43eb934bbac02d41b1729db15ceac8d551c36b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 30 13:25:06 2009 +0200
+
+    Doxygen (do not use 'dot')
+
+commit 1a5ef336a2700bc8399f43a473ffc49bd81f37c8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 30 12:15:25 2009 +0200
+
+    Renamed class Yaz_bw to TimeStat
+
+commit 660f5e8b270182001d931f65fa03ff95819c3b92
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 29 17:19:13 2009 +0200
+
+    New class yazpp::LimitConnect (from YAZ Proxy)
+
+commit 974d1f414b0b0e0859a5337e3155332a4f372d5f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 29 16:48:44 2009 +0200
+
+    Bump version due to new classes
+
+commit 51fb20d2ce680c6293d0293fd4a591e61963b689
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 29 16:48:38 2009 +0200
+
+    Bump (c) year
+
+commit de5a7aee52649279a11118f2b38c0f2763bf9cc6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 29 16:46:14 2009 +0200
+
+    New class Yaz_bw (from YAZ proxy originally)
+
+commit f9728dc910413e30b7fe33c043b78d3736859ab4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 29 16:44:43 2009 +0200
+
+    New utility int GDU::get_size
+
+commit d5a7c67de0f8caaf7bbd2da51e6c4fd02d2216ca
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 10 09:42:05 2009 +0200
+
+    Fix warning (make string constant)
+
+commit 0499c317de03b020469f3122c8a1cee8bc459389
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 9 15:43:51 2009 +0200
+
+    Version 1.1.2
+
+commit 008513e90ad91ea1497e1cfb7b04fd899391aee3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 9 15:42:17 2009 +0200
+
+    Add doc-clean rule
+
+commit 5572939808550f720b9c246befcdef19955ff067
+Merge: 5896d0f 100c063
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 26 14:30:30 2009 +0100
+
+    Merge branch 'master' of ssh://git.indexdata.com/home/git/pub/yazpp
+
+commit 5896d0ffe17229588e918231216b292fc06c774d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 26 14:26:34 2009 +0100
+
+    RecordCache::add clones instead of making refs to it.
+    
+    RecordCache::add clones data for real rather than grabbing memory from
+    supplied ODR. The clone is achieved by new functions in YAZ:
+    yaz_clone_z_NamePlusRecord and yaz_clone_z_RecordComposition.
+
+commit 37dd478cd6917b9f8a66e123dc35cabc77b4bcc4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 26 11:31:16 2009 +0100
+
+    Bump version to 1.1.2 and require YAZ 3.0.45.
+
+commit 100c063b92efad190f49054d09cad7b8eb3bf0ca
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 23 17:52:13 2009 +0100
+
+    Update to new logo
+
+commit 8f1c2fd0fd572e1787a2c64206356128b75dd263
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 27 21:58:39 2009 +0100
+
+    Updated m4.
+
+commit 75f1e8aff47bf907c3518e147e17ed19a57939bd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 27 21:57:15 2009 +0100
+
+    Updated doc/common.
+
+commit 6b22d0543d41bec8626f3ae7ac866bcab7de44bd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 13:32:39 2009 +0100
+
+    Updated footer comment
+
+commit 9fef1c618f2f936041b3b58d61e406182033ab30
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 13 13:57:40 2009 +0100
+
+    Happy new year
+
+commit 16dba5340834b1c35523bb1fb92355e9f56fe0f0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 13 13:52:45 2009 +0100
+
+    Using copyright-year entity
+
+commit 46ac24ee02be0583e377638f59506d535e13a311
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 13 12:57:49 2009 +0100
+
+    Fixed Requires for libyazpp3-devel
+
+commit 67f914be470375a452aa07de5d807c400d383fb4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 13 11:53:52 2009 +0100
+
+    Added RPM spec
+
+commit 761d5898b2ca24ab25601510b04653af69eae4bc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 25 13:31:51 2008 +0100
+
+    Call autoheader when needed
+
+commit a0042915b20e2a1d15efa254c35e22cf09e0796a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 25 13:21:10 2008 +0100
+
+    Same buildconf.sh as YAZ
+
+commit 2f290fa37534e47e77ca02ff1dcb47d2b56be500
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 10 18:16:05 2008 +0100
+
+    Updated for latest doc/common.
+
+commit 6102d9c8e73ee414dc2d5654b4cba83432d1f15a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 7 13:59:44 2008 +0100
+
+    Same buildconf.sh as yaz
+
+commit 08ee7dad0f15f4086c1cb7ffcb09dddb630d3b70
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 21 08:48:39 2008 +0200
+
+    Removed ignore from unused directory.
+
+commit 68ad222ee1bf4dab732e8bf3bfa14d5c2d2520fa
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 25 11:06:51 2008 +0200
+
+    Updated for newer libxml2/libxslt
+
+commit e2e564be7eb9bcd9280950cec385750dd759605e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 26 11:30:22 2008 +0200
+
+    Run both git submodule init + update
+
+commit fa0660538cb250e7a9bc000a4f06d79d4c27d354
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 26 11:19:06 2008 +0200
+
+    Always run 'git submodule update' when git is in use
+
+commit 7c6491260329d0714c02580c37f700250a2ac09b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Aug 26 10:52:22 2008 +0200
+
+    Use PDF_COMPILE for PDF creatio
+
+commit 8e48ab82126f6c2613994cd75f5487b48b8ef6b0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 6 13:05:13 2008 +0200
+
+    Build-Require YAZ 3.0.30.
+
+commit 7fe40b6ffe55c4eaac8add70a5c2dab861f63ce0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 6 13:02:20 2008 +0200
+
+    Debian version 1.1.1-1
+
+commit 0b2d376a210daa549577ea18b913819d8156ed5d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 6 13:00:23 2008 +0200
+
+    Version 1.1.1.
+
+commit 10bef8a44467b3fbd7e023cd995a9607941dddec
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 6 12:53:20 2008 +0200
+
+    debian directory no longer part of dist
+
+commit 64cbd56ebd4635dfa8ee656a52510bac325f4c79
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 27 23:24:34 2008 +0200
+
+    Removed trailing comma from enum list
+
+commit 55119d24b44e72b7bfef2e5a67da4964c0cd16e4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 21 13:32:47 2008 +0200
+
+    Bump version to 1.1.0.1.
+
+commit 4d1a034feb42a9fd1a42634022a2634556ab613d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 20 16:04:11 2008 +0200
+
+    Changed decode failure handling a bit so that failNotify is called.
+    
+    Changed decode failure handling a bit so that failNotify is called.
+    But use shutdown rather than close_session.
+
+commit 4589223b9cad791d79079fcd669d3292d37b88e3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 20 15:53:02 2008 +0200
+
+    Fixed crash that occurs when decoding fails.
+    
+    Fixed crash that occurs when decoding fails. The failNotify call
+    is removed because the preceeding close already destroys the object (this).
+
+commit 4b3585940162cf9ca65ca4a6914c0addcde50eef
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Apr 19 18:21:47 2008 +0200
+
+    Updated copyright headers.
+
+commit 1cbd93cb73218ceb815d48a242c67061316f9779
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 15 10:22:03 2008 +0200
+
+    Updated doc/common.
+
+commit 148c0ad41798eff87e1b387381e6d96c1b618696
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 15 10:15:12 2008 +0200
+
+    Ignore more files
+
+commit 6ed58852b5c17bc8ac4124e916b9167af47db6b7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 15 10:14:02 2008 +0200
+
+    Latest m4
+
+commit 55e739e60aa72dd103309c2cf2b747f833021fed
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 13 09:27:48 2008 +0100
+
+    Use gitignore based on old cvsignore.
+
+commit 7f3202af2491642a5565e1394505c8dc0f50e4f1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 13 09:27:35 2008 +0100
+
+    Use Git log to build ChangeLog.
+
+commit 05ee65c04676229f218e95ba6e1e19354ec14175
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 13 09:27:16 2008 +0100
+
+    Add submodules if not present already.
+
+commit bf2a4d37d90e334feeea4eb57862fb595b2af192
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Feb 29 14:21:14 2008 +0000
+
+    Towards 1.1.0
+
+commit 5339630f79745854ae88386edac920e381728562
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Feb 22 14:25:53 2008 +0000
+
+    Require YAZ 3.0.26 or later.
+
+commit 44ceeaf709eb733c9e10f8f7de06b62d36dead63
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 21 10:16:26 2008 +0000
+
+    For win, generate yazpp3.dll instead of yazpp2.dll.
+
+commit 688b83880520e7485087b56cc1dda29019d7413f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 21 09:43:27 2008 +0000
+
+    Fixed bug #2095: libzoompp.so must be it's own debian package.
+    
+    Fixed bug #2095: libzoompp.so must be it's own debian package - by
+    bumping library libzoompp.la version info major from 2 to 3.
+
+commit de505e29b073346ded11e0932689051a6af2b0a2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 24 21:51:24 2008 +0000
+
+    Require autoconf 2.60 (bug #2050)
+
+commit a438a0f4fd42a689441dd4a5131cf53704d338ec
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 21 16:10:08 2008 +0000
+
+    Update to lib version 3, because API has changed.
+
+commit e432b52c33a684e9f90627b971d14da6b362daff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 21 15:57:27 2008 +0000
+
+    Changed IPDU_Observer's interface WRT close.
+    
+    The IDPU_Observer method, close, renamed to shutdown. Method hutdown
+    shuts down the socket connection (immediately).
+    Added new method, close_session, which closes the connection as soon as
+    it becomes idle (when everything in queue is flushed).
+    These changes should make it possible to fix bug #1130.
+
+commit d87f1c9e3b773cce0cce6cd9b67127f9008c7008
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:57:26 2007 +0000
+
+    Ignore dox
+
+commit da282bc7680c343e21b6a3e48833f044724cb8d7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:55:59 2007 +0000
+
+    Build Depend on 3.0.16
+
+commit 1aefdd1535f49b943d224e3f6119da3503c426cd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:55:04 2007 +0000
+
+    Modernize doxygen file
+
+commit b1b0ab92f7f3fa1e584a7237cd82d392b8ea3c61
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 13:51:01 2007 +0000
+
+    Towards 1.0.4.
+
+commit 721ed665c7393c4fa7957f09fe4c3a1036312ce4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 22:10:10 2007 +0000
+
+    Update for changed yaz_poll parameters
+
+commit a07200295daa103c01535d72e64dd8b295f93289
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 9 21:49:15 2007 +0000
+
+    Using yaz_poll instead of select.
+    
+    SocketManager::processEvent uses yaz_poll instead of select. This
+    requires YAZ 3.0.15 or later.
+
+commit 8841f6101cb2f5c32c726e22c7ee1ef97bb288eb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jul 10 09:42:28 2007 +0000
+
+    Removed / in doc install rule to avoid double-slash (cygwin)
+
+commit be1898f9a41a4df5538a64e05fe16de3c967a245
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jul 10 09:41:38 2007 +0000
+
+    Removed / in doc install rule to avoid double-slash (cygwin)
+
+commit 752b8a910eb19be1a1405bae2f6be54e21c20880
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Jun 17 07:06:20 2007 +0000
+
+    Removed definition of docdir. It is set by automake already
+
+commit f4a712d1c3fe702351dadafdeab971a16d9960c4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jun 14 08:27:20 2007 +0000
+
+    Clean up. Manifest
+
+commit c94e207d82b045677b93df7c89bd0982c59ecbcb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 22 11:11:05 2007 +0000
+
+    Use entity idcommon rather than common
+
+commit 71cc5e5d95d48ec001af3130c10b99dc9d4664b3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 9 09:22:57 2007 +0000
+
+    yazpp 1.0.3
+
+commit d588f1d530f53c4d38a4a5f954545b06b2751968
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 8 12:04:50 2007 +0000
+
+    Use Odr_oid for OIDs. Require YAZ 3.0.2.
+
+commit 11bd74f3063f71c59a09afd95e775fc810be563e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun May 6 20:29:50 2007 +0000
+
+    Major version 2 lib. yazpp2.{lib,dll} or yazpp2d.{lib,dll}.
+
+commit d5b3fa6deab5b699a950ce7c0d6d5953fc354a6e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 2 09:17:48 2007 +0000
+
+    Allow NULL otherinfo
+
+commit fa96bc0dcc16f6ac3e33b5144664e51cb7d09874
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Apr 16 21:54:23 2007 +0000
+
+    Another and hopefully, last, YAZ OID DB update
+
+commit ca58a20d661f245f8c3974fae6b61b50dada80f2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 13 10:26:57 2007 +0000
+
+    Ensure yazpp includes files are listed first in output of yazpp-config
+    --cflags.
+
+commit d508100e993ab5c9a415bd1826b939875dcfe91c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 12 15:00:33 2007 +0000
+
+    Update for YAZ 3s new OID system
+
+commit 13e7a3ad540a4312b12a1076aa17c29e326a0adf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 10 12:14:04 2007 +0000
+
+    Do not use z_ext_getentbyref
+
+commit 79076a95d4e3fc19cbf52bf2b7d35137809f3f7f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 20 16:21:58 2007 +0000
+
+    Debian packages libyazpp2 and libyazpp2-dev. These depend on libyaz3,
+    libyaz3-dev.
+
+commit b68803f07a763804a784806082f484cb0c8b531a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 20 07:54:11 2007 +0000
+
+    WRBUF updates
+
+commit 38140bf14e3fe76270ed12160eaf3bb29b428051
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Jan 29 13:30:53 2007 +0000
+
+    preparing debian release 1.0.2-1
+
+commit a3e7f654e8de118e7bb227dce388d8ef243396a7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 25 18:36:48 2007 +0000
+
+    Towards 1.0.2
+
+commit 6d8928c9ef4a00aa732a2ee7bdc42c4646f8fc32
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 16 11:54:55 2007 +0000
+
+    Omit use of yaz_log in Yaz_cql2rpn class
+
+commit 572f0d8babb3b5263f9848e094f80a3ea5926770
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 12 10:15:06 2007 +0000
+
+    Omit YLOG_LOG msg
+
+commit cd0004748ff588edb379f4967cfb03b376a55827
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 12 10:09:25 2007 +0000
+
+    Added Yaz_cql2rpn::parse_spec_file
+
+commit 59596fadb840ac8d3e1d1f5351a1cbafb2ee727b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 11 12:18:55 2007 +0000
+
+    More quoting for spacse in fnames
+
+commit a5da4db2656f68ab009555adb8bd3b410f4ac3c0
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Tue Dec 12 14:39:02 2006 +0000
+
+    added yaz includes to make compile of dependend packages such as metaproxy successful when using yazpp ad debian installes package
+
+commit c0653cfc6ee59f604209bb6b8fe822b2906c31e4
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Wed Nov 29 10:46:47 2006 +0000
+
+    include header files in doxygen output
+
+commit e4b6e06627a3c35bec54127767ef7b98686d02e4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 27 11:34:52 2006 +0000
+
+    Remove make dependency of common/tkl.xsl
+
+commit 817792c5dad4a935176fe03387883d5d3dee8c5c
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 25 12:11:01 2006 +0000
+
+    Ignore generated Doxyfile
+
+commit 90b8490a4ddc8533a696bd8a4d7248faf89b0de9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 09:39:43 2006 +0000
+
+    Fixed 'make distcheck'. Failed due to html files not being removed by
+    uninstall. Added uinstall-hook for the doc directory.
+
+commit d3c2988adfeae4d8e5b859bff1d75b1904d2c742
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 10 21:59:43 2006 +0000
+
+    Added id attributes to some sections
+
+commit 21e6b2c6f9f51b0debc59ff79be6273c5b1ee422
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 10 13:46:18 2006 +0000
+
+    No sub section for license appendix
+
+commit 1c9d3b7763e829d8ff96efab06e95972d855965a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 10 13:37:36 2006 +0000
+
+    Changed license to 'Revised BSD License'.
+
+commit 24c10efab6eb1e160653a15d580913706a01499b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 10 13:31:49 2006 +0000
+
+    Cast a few offsets to long for yaz_log calls
+
+commit 94f2358388fa1d1f188ef672ec9ee6acfa131c0e
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Wed Oct 4 07:51:17 2006 +0000
+
+    added Doxygen CPP source code generation to project
+
+commit c7c1089f9c601a586afa8948ffa70a588512fb15
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Thu Sep 14 06:57:59 2006 +0000
+
+    added debug output after configure
+
+commit 8b4334d3c1e2329c87c55eee70359cd927a4f34d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 11 23:06:28 2006 +0000
+
+    Increase size of resulting RPN buffer for CQL conversion to 10K
+
+commit 7a6cbcbf3b6e88062fe8277f3b5cb94b66ce5082
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 7 10:07:02 2006 +0000
+
+    Dist/install HTML files automatically
+
+commit 93b7b5befe40c4a3f847c59071c4f2f6cd5325e7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 7 12:57:15 2006 +0000
+
+    Update test becuase yaz_query_to_wrbuf now omits : before
+    query type in string output.
+
+commit 36be234cea2889e546a98f46de4c742d9b9c4061
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 7 12:34:13 2006 +0000
+
+    Require YAZ 2.1.23 or later which defines XML2/XSLT cflags/libs.
+
+commit 63caccd96329d38750b23c1962bc6a37e7d3c7b5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 7 06:21:29 2006 +0000
+
+    buildconf.sh --disable-shared --enable-static
+
+commit acfd6b886f7fe89c9ac504a05283e7964161102d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 7 06:18:24 2006 +0000
+
+    Enable shared by default
+
+commit 2425f4b50a808c8a798ba726c608a3343c6f30a5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jul 6 11:47:45 2006 +0000
+
+    Depend on YAZ 2.1.23
+
+commit 3ebdac624f7c6cdef6894cd6a42deb34a4c51bc9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 28 21:43:45 2006 +0000
+
+    Fix dist-hook so that make distcheck works
+
+commit 8183ba06bf6e3e7df8eb3094be1adfbcee0746a9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 19 13:12:04 2006 +0000
+
+    Version 1.0.1. Added assignment operator for class Yaz_Z_Query.
+
+commit 1ab37c2eae194fafbdc1485f96aae60df6ba4c57
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Jun 17 19:16:04 2006 +0000
+
+    Mention SRU rather than SRW/SRU
+
+commit 4655660771341e86e736bfd646cc75837f8b7561
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Jun 16 14:01:20 2006 +0000
+
+    Ignore local.ent
+
+commit 2ebb3521a843ca02045f543467c74a32035f7872
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 16 08:59:40 2006 +0000
+
+    Make ChangeLog in make dist rule
+
+commit 5fc12d397f0e5b6e69347b6a157004fc2bbcf02d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 2 10:57:55 2006 +0000
+
+    Dont generate xsl.in files
+
+commit c08c77b6a1eb9d5a3350f332a580d3063e0b18f6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 2 08:50:29 2006 +0000
+
+    Use entity for version - not hardceded. Small reformat
+
+commit 8b7166f0d46ca73ac4a241aebf153101da23012c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jun 2 08:43:11 2006 +0000
+
+    Generate doc/local.ent via configure instead of doc/yazpp.xml.
+    Use {HTML,TKL,MAN}_COMPILE macros for documentation.
+
+commit 0e003c1f98eb27d793ddaa2579f286c2cea6d066
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 26 19:46:37 2006 +0000
+
+    Documentation now based on Docbook XML/XSLT using xsltproc + Norman Walsh's
+    stylesheets. It means that the CVS version is no longer depending on
+    jade/openjade or docbook-to-man scripts. PDF is no longer part of the
+    distribution - but can optionally be made using DSSSL/jadetex or FOP.
+
+commit 41a35e7f0f8f5c66a51e44467092a28f5e93c24a
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu May 25 15:49:27 2006 +0000
+
+    Note the need for G++
+
+commit d1beaad9cc857916a978c5efa7feae47a1c81d81
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue May 2 16:23:24 2006 +0000
+
+    Ignore generated files
+
+commit 04249b21da0499a4f08ad7d6ea8c45be7019992d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon May 1 08:22:40 2006 +0000
+
+    Removed docbook depends. Not needed becuase they're part of dist.
+
+commit 18aa8f83e382be18c46c33b05afd13184b2decd0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon May 1 08:06:32 2006 +0000
+
+    Update header
+
+commit 89444665a2480ec9b143d54916bc9599dc32da91
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 14:14:59 2006 +0000
+
+    DEBUG=0
+
+commit 1430b23b87732406a4a96f047a3f44c2862154a7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 14:00:07 2006 +0000
+
+    Simplify makefile. Use dobj for temporary objects in debug mode.
+
+commit d667ceb151018530dd981fb304a010a2f59e1958
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 13:11:01 2006 +0000
+
+    Update installation about yazpp_1 fname
+
+commit 7f5ac724aed4a7413c396051269ff80acb748123
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 13:04:03 2006 +0000
+
+    Put API version in yazpp lib+dll
+
+commit 876d1f923efd4054054e745c56794e1fc356d7bd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 12:53:14 2006 +0000
+
+    Added more URLs to YAZ ZOOM doc
+
+commit 973d9f815873441606d1bdd613498c76e16ee3d2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 12:51:45 2006 +0000
+
+    reverted to Emacs sgml mode
+
+commit 61af33c72876fc89a25473b4dd5a42a259b47bf9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 12:22:03 2006 +0000
+
+    Require YAZ 2.1.18
+
+commit 29893365ab69a5b418431e206b320e41df9794a3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 12:21:37 2006 +0000
+
+    Fix link to home site.
+
+commit 1ea80c7db763659872ec9c60bb0082ba465976cf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 09:09:48 2006 +0000
+
+    Notes about DEBUG=0/1
+
+commit 2d2beb493e5e90254d553a15477fdf88b73b8068
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 09:07:43 2006 +0000
+
+    DEBUG=0
+
+commit ac9456cb81f1b7d6fdd3523d9c6ede458106c378
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 07:43:06 2006 +0000
+
+    DEBUG version generate yazppd.{lib,dll} and use yazd.{lib,dll}.
+
+commit 7aa95cb7e190ba8a2407726e8a9df4846c157087
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 07:21:42 2006 +0000
+
+    Remove use of option /YX
+
+commit ff61fa576933d620166732a19cd11a1c2a760914
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 30 05:52:06 2006 +0000
+
+    Update for VS 2005
+
+commit cf5086caca7322d656da1aaebf0453bc43cdc5a0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 27 13:24:19 2006 +0000
+
+    Ignore yazpp-config.8
+
+commit bd4b4f856f1094d75802a0715c2b242233fc9b5c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 27 13:04:39 2006 +0000
+
+    Using common entities
+
+commit 26b19f45d3d35247ecb637a112d08f36cc255879
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 27 13:04:24 2006 +0000
+
+    Update API with new yazpp definitions
+
+commit da1f67a7cfc946f75fc80659b146898f3361f9c8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 27 12:37:44 2006 +0000
+
+    More 1.0.0 news
+
+commit 1ec3ab1ba223a0ed562a079474866e33102a4a65
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Tue Apr 25 12:37:05 2006 +0000
+
+    reverted to Emacs sgml mode
+
+commit 420b71c97d0535fcb740e0558694f71acb70b060
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Apr 24 12:55:16 2006 +0000
+
+    inserted Emacs nxml-mode in bottom of XML files
+
+commit 9c1ce0232315108d1e12bc252f20620382ea5762
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Apr 24 12:47:34 2006 +0000
+
+    inserted emacs nxml-mode in bottom of xml file
+
+commit 2057994f08067529a317f8b05bdb2dfa6c626e88
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Apr 24 10:10:13 2006 +0000
+
+    corrected xmllint errors
+
+commit 7dace8e13f71ea97eb0f4056adebb37bb07f1d60
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Apr 24 09:17:47 2006 +0000
+
+    preparing new debian source package libyazpp version 1.0.0, which all changes
+    needed for nameshift from libyaz++
+
+commit c6421a7b09ff0d7f2bee8e539d58512fdf5fd82a
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Mon Apr 24 08:55:28 2006 +0000
+
+    added man pace for yazpp-config.8
+
+commit 76020c413df4fdf9127031270cf734be70055047
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 20 11:36:40 2006 +0000
+
+    Use copy rather than symlink for id.png
+
+commit 9e7f690d44f532dfe538a9f65edc6bc5aa3884ea
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 20 11:26:34 2006 +0000
+
+    Fix DISTCLEANFILES
+
+commit 711cb523bba53b58a859b3f9d9d34ee7fcc5c52e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 20 11:18:29 2006 +0000
+
+    Updated to use doc/common (id-docbook-common)
+
+commit 9fe4955c2234d4290f19d061dc2dabc52bd92ae2
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Apr 3 11:50:08 2006 +0000
+
+    Fix typo of ignored library name.
+
+commit 44f18491247bcc5d5d21b6c8e794a5377746a33f
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Apr 3 11:48:35 2006 +0000
+
+    New
+
+commit c5c4d328f1c998b20e576bca88094d410222e9d6
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Apr 3 11:47:46 2006 +0000
+
+    Ignore new generated "yazpp-*" rather than old "yaz++-*"
+
+commit 05100bc4f21bf1e67a001b618036dec8996f505a
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Apr 3 11:46:32 2006 +0000
+
+    Ignore new "yazpp-config" rather than old "yaz++-config"
+
+commit 1cf6fe9c2c71f22ad5b0fbcbec8687958dd68be0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 30 16:36:12 2006 +0000
+
+    Using yazpp.m4 + yaz.m4 from m4 directory
+
+commit fb334c4fc1a825055a3e01328015190ae6a7bf7f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 30 14:15:58 2006 +0000
+
+    WIN32 updates
+
+commit 6a6fabffa5a8a8154a7076eaf653bfb81fd7142c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 30 11:58:00 2006 +0000
+
+    if PDU_Assoc::sessionNotify returns 0; the accept will fail neatly
+
+commit f8b1fb4b708542891a98c2eb7f1e1d5fadd2a33a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 30 07:45:55 2006 +0000
+
+    List more dependencies
+
+commit 2a6ced8bd8ce528ca91107d862b544737a467f78
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 29 13:19:41 2006 +0000
+
+    Update references to yaz++ -> yazpp
+
+commit 0cc824e02bc2c69986bec8c9dd9ff53f07a0cd3d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 29 13:14:13 2006 +0000
+
+    The upgrade to automake 1.8/1.9 causes the product dist to be called
+    yaz---<version>. So we are using p rather than +, thus getting
+    yazpp-<version> instead. To be consistent header files and libs have moved
+    too.
+
+commit 76d66b222afff97cf367a3e7b8bfe045a62d0d57
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 28 19:56:04 2006 +0000
+
+    Move to automake 1.8/1.9
+
+commit 9245208f93f95246e44cb597317f9e13c8b60e67
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 28 19:51:38 2006 +0000
+
+    Remove class qualifiers in method definitions. Breaks gcc 4.1.
+
+commit c9e2d382ae66496ee9948161ef66a14e8e29822e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 27 15:10:41 2006 +0000
+
+    Debian package libyaz++1. Replaces libyaz++.
+
+commit e4cbe3f4b07fc63496a5302741d07cee26331884
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 1 22:59:16 2006 +0000
+
+    Require YAZ 2.1.11 or later
+
+commit 4a5dc4c65862a45a12d01b37e625ffc5e5e34a6b
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Dec 13 17:10:12 2005 +0000
+
+    Ignore "tstquery", compiled by "make check".
+
+commit ecf31b727a3af51c89a1aa7b67f6e1265a2ce73f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 3 14:48:06 2005 +0000
+
+    Removed unused makefile code
+
+commit a95799991397f6e30b76afb784b6b6795db9386c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 3 14:46:34 2005 +0000
+
+    Added new objects gduqueue+gdu to NMAKE makefile
+
+commit f41efa9429833c3b84520ee1b4f6284cf3d0619c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 27 20:10:27 2005 +0000
+
+    Use xsl:element for document element to prevent ns
+
+commit b03c09ff93152fb9387281ad5431e6b4d44f16cd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 13 09:56:38 2005 +0000
+
+    Class GDUQueue in separate header/source.
+    Added copy assignment and copy constructor for GDU class.
+
+commit 594ba02c8c039a6570451da08e3461f22a7d0d11
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 10 15:59:43 2005 +0000
+
+    Do not use child/parent pointers for threaded pdu assocs
+
+commit 50b6d3806a9e7967e4d8625c7c3ec25834ebc07c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 5 12:06:45 2005 +0000
+
+    Check for multiple inclusion of z-query.h.
+
+commit 58ad752713282ff9d9baa1b958f09eaa26c4c822
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 27 17:57:50 2005 +0000
+
+    Change implementation of Yaz_Z_Query::zquery2pquery to use YAZ'
+    wrbuf_put_zquery. Added copy assignment for Yaz_Z_Query.
+
+commit c57d9273dedac129b03d17cb8f6825d180631fd2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 27 12:15:09 2005 +0000
+
+    Build small yaz++ client too in win32 build
+
+commit 5f96eba22d20b9d30f4afc9ba07ef9e95cffb0dc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Sep 23 13:11:04 2005 +0000
+
+    Use non-pure virtual destructors
+
+commit 71f9f9c7183e1e36acd04ea2f8d165cc7ee1adeb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 22 12:47:33 2005 +0000
+
+    Update WIN32 with new source for virtual desctructors
+
+commit 8ebe1a2bcb6bec3d8c4b4077b4c85830d9398c5d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 22 12:40:45 2005 +0000
+
+    Added pure virtual destructors for interface-like classes.
+
+commit e63ffd23f48e25b606fea163c96ea77a89b9c6cf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 12 12:49:29 2005 +0000
+
+    Sync with YAZ' version
+
+commit bcd72609eac331df1f0d196e19d38f1337f30716
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 15 13:04:27 2005 +0000
+
+    Update to latest YAZ m4 util.
+
+commit e19d9fe1d9e538d9978cfcb3c2685ba0f234e6b5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Aug 11 18:53:01 2005 +0000
+
+    Remove unused variables
+
+commit 239a8636c42a58275fede4965d00570dd94a35ee
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Aug 10 09:14:02 2005 +0000
+
+    Use latest Docbook 4 DTD.
+
+commit 7411ed6df7fc0b535f83503f73d70e80f390e295
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Jun 25 15:53:19 2005 +0000
+
+    Expanded tabs in all source files. Added vim/emacs local variables
+    trailer.
+
+commit 75f7c460d6d10961f3d2ed841b757d6d6b7725d7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 21 21:30:24 2005 +0000
+
+    Return NULL if peer is not yet known
+
+commit 98e6678fe9ad271886a413ce547d182de453c5c1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 21 17:55:00 2005 +0000
+
+    Bump yaz++ version to 1.0.0
+
+commit 6196cb9e06a6cc83892e1ad16daa1fb921111e28
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 21 17:37:15 2005 +0000
+
+    Added new class GDU.
+
+commit 2d21fb7f6fdf924a2dcbb69722425f555b80821f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 21 17:36:46 2005 +0000
+
+    Init member timeout_this in socket manager (valgrind warnig)
+
+commit eea2caea1263bed0aae268f72d985cbb1822ac30
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 8 13:28:05 2005 +0000
+
+    Removed prefix Yaz_ from several class - and interface names now
+    that a namespace encapsulates the API.
+
+commit 86726b00b052694e65b036c262f5fe9096554175
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jun 2 06:40:20 2005 +0000
+
+    Introducing namespace yazpp_1 for all YAZ++ functions. This will
+    allows us to remove the annoying YAZ_.. prefix for classes and
+    convert preprocessor defines to proper enums.
+
+commit 786d1b31162f3b4e6e5b106946781a5117b47d04
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 20 21:29:45 2005 +0000
+
+    Bump version to 0.9.1
+
+commit c5291c08882ed8d6c3955204c5f2d7193d22bea9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri May 20 21:28:55 2005 +0000
+
+    Added missing include of yconfig.h
+
+commit ab68ebc01f733258280bdf40abbcbc3a288c3a87
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 17 20:34:36 2005 +0000
+
+    Use size_t for get_record index.
+
+commit b6d98b185326125463fae2adc017dcde90b9f408
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 17 20:34:28 2005 +0000
+
+    Copy yaz' buildconf.sh.
+
+commit c040f16f33607c2f59c41f6b85ce02840d189701
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 17 20:33:57 2005 +0000
+
+    Remove yaz_log call
+
+commit 5e3f7e1a720a08d30c407049c94c6ca825a5ed27
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 17 13:00:56 2005 +0000
+
+    Handle present out of range better in sample server.
+
+commit 2e459a1bdde5b33897de79f6dfc55237db188460
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 17 12:59:50 2005 +0000
+
+    Fixed bug in Yaz_Facility_Update::recv: taken (1) was returned for
+    all extended services. It should only be returned when update extended
+    services was received and handled.
+
+commit bbd559f62b1e582ba4519c31ff1911723744340d
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue May 3 16:29:52 2005 +0000
+
+    New constructor with no arguments, does not connect.
+    New explicit connect() method
+    Old constructor with hostname/port args rewritten to use these.
+
+commit dcd535eeb3ceaa9cfb19395f8e1780609f7c7d4b
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue May 3 16:21:16 2005 +0000
+
+    Reliable result for connection::option() when returning a null value.
+
+commit db365aac1accc714f92d8a3454ed25fa135b63a8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 7 13:36:24 2005 +0000
+
+    Added WIN32 bin
+
+commit 3e58918d36a82eb98cf55f7438b7c06f1048ed0a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 7 13:35:47 2005 +0000
+
+    Added this.
+
+commit 1bfe69ca0356ec89a7ea1c4219f09b57502f6168
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 7 09:10:44 2005 +0000
+
+    Towards 0.9.
+
+commit 012d5d9f3028085784350664e8dbf1f56197ba15
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 7 09:07:23 2005 +0000
+
+    Added version check
+
+commit 25d0aba0fec6f0fdf2140cc727957e14046125a4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 17 12:48:27 2005 +0000
+
+    Added include stdlib.h
+
+commit 29d5f0cb70a5a61924e3b729f6ce5998cd6485ab
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 17 09:55:58 2005 +0000
+
+    Added include stdlib.h
+
+commit d58ea1d3d51d6dbb10f19d7b34609ade1eedcf46
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 14 10:13:50 2005 +0000
+
+    Added configure check for various headers
+
+commit 2f8ce6d398a9ec190b41a851bcd4b4bd2e3c2c8c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 11 20:56:34 2005 +0000
+
+    Bump version to 0.9. Abort if YAZ is not found
+
+commit 491fb0058392b83d1e44eaa7494e827f3530f3dd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Dec 13 20:50:54 2004 +0000
+
+    using yaz/log.h again
+
+commit d3149b0b6fb8208e6e7a145313215cd259970a74
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Dec 13 20:22:00 2004 +0000
+
+    Define YAZ_USE_NEW_LOG=1 if app require YAZ > 2.0.28
+
+commit 5bcfe64fb9df653333be8626b7b49f302534663e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Dec 3 14:27:12 2004 +0000
+
+    Avoid Dollar ID
+
+commit c5fe4096516e6969aa71c5da0e94b537edc00fba
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Dec 3 14:26:39 2004 +0000
+
+    YAZPP_INIT macro searches ../../yaz++ as well (to ease make distcheck)
+
+commit 4c758111f1ff5a815888f70a4c4335ab149f5608
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 30 21:10:30 2004 +0000
+
+    Updates for yaz/ylog.h
+
+commit 5ddd5103c01775e8432a081de026c3cd75681e8b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 22 10:54:53 2004 +0000
+
+    Fix new bug introduced by previous commit (../yaz* not used)
+
+commit 85fb4f09ae29b56f0c29ccf47af746c42168e3ac
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 19 18:31:57 2004 +0000
+
+    Fixed bug #212: make distcheck uses global yaz, not a local one
+
+commit 6517aee7621ab0af49214eb793af6126a9a524d4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 23 12:44:10 2004 +0000
+
+    Fixed bug #188: unhandled event in processEvent. The error was seen in
+    rare cases when timeout socket events occurred.
+
+commit b3c09e4bb47beaf58ad1e1dc847339b68ac1af0e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 11 20:48:18 2004 +0000
+
+    Use XSL_DIR in tkl.xsl
+
+commit 7960e32c974d4af922f0d1ef02ae4eef4f39f7b0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Sep 17 08:44:55 2004 +0000
+
+    Remove Id from header due to inconvenient diffs when yaz.m4 is copied
+
+commit a746c25073f57d3094cd1834e8dcc9cf19f82f91
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Sep 11 21:10:38 2004 +0000
+
+    Added --with-yaz to rules
+
+commit 32686db7ee99a626a9c2126470096607bc7d7b47
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Sep 11 20:54:02 2004 +0000
+
+    --with-yaz instead of --with-yaz-config
+
+commit 9a7474140eb5aaaba2b50cbf8354eb3e5e2b813e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Sep 11 20:53:10 2004 +0000
+
+    option --with-yazconfig renamed to --with-yaz
+
+commit 15b0a8ff280a89593d09d320b841191cdd4cedf6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 9 09:55:10 2004 +0000
+
+    DTD_DIR assignment
+
+commit 93ebae652d8c220ccc4cf023e1cbc33a5a926e3f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 9 09:44:46 2004 +0000
+
+    Update to new --with-yaz-config
+
+commit a8026ae09c1be269bb3db0a21602815a897f5bf7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 9 09:43:20 2004 +0000
+
+    Update yaz.m4. Update to new --with-yaz-config
+
+commit eb15a0d2234ee4020a738cf7730091b3475ff793
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 6 07:50:51 2004 +0000
+
+    Added a few timeouts
+
+commit f3e04c274caedf95069ae77b369f71ebf9de00d4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 16 12:40:14 2004 +0000
+
+    Added updated yaz.m4
+
+commit 1e11eee83675ae9f86ad7fdcd4fad6df96aa7f05
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed May 12 07:45:06 2004 +0000
+
+    Fix include path order to avoid yaz++ from using old headers.
+
+commit 8836b7fcd09d2cd7548f814b32a6772b5865789e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 4 04:09:30 2004 +0000
+
+    Fix link
+
+commit 84d0e77ec401bb5c245502fc3c0d44864025fb9c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 30 19:35:30 2004 +0000
+
+    Use YAZ_DOC macro to setup documentation.
+
+commit 573f56cc6461c832f4b6555b76a16a62f6d971ef
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 23 19:04:12 2004 +0000
+
+    Towards release
+
+commit fdd488c27e64e5465029fa8116fa00e19085ba80
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 22 18:44:51 2004 +0000
+
+    Omit proxy API
+
+commit a79567252cfae50a879904bd6e82c84ee63c6b70
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 22 18:44:33 2004 +0000
+
+    Check for HTMLFILES
+
+commit edb5be4254d1e9c782cb7bd0a2f3cb2216652bd1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 22 07:53:15 2004 +0000
+
+    Use --with-yazpp instead of --with-yazppconfig
+
+commit a78a33783fe04e47932ad2c4a10e70659b0d15f4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 17:54:48 2004 +0000
+
+    Mention YAZ_DIR.
+
+commit 44672975f94d9b1c3975fbae4452c07bd9578269
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 17:53:03 2004 +0000
+
+    Minor updates in comments
+
+commit bb79c77f6fdcc29e886082a96c50e02405d6a9d3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 17:49:36 2004 +0000
+
+    Update WIN32 makefile to reflect separate YAZ proxy
+
+commit a4bacf24536063f90d6c6662302957632cb8e2c9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 17:31:46 2004 +0000
+
+    Dont mention lib
+
+commit 4026be7cd79d96cce51cf5f882384e088ddfc28e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 14:34:01 2004 +0000
+
+    Fixed PATH search for yaz++-config
+
+commit 379930a890763319b4cd3a777cb7c4f51cbe2dd6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 14:19:37 2004 +0000
+
+    Fix LICENSE
+
+commit 4571f82d68672d5aebaa24d357ae4e9f3fb46a07
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 14:18:53 2004 +0000
+
+    libXSLT no longer required for yaz++
+
+commit fa822163413670839cf7939f06a5ab5d126d77d2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 14:14:03 2004 +0000
+
+    Move YAZ proxy away from Debian
+
+commit 7d1dd6ed33ed38cfe1d86604ba0c31b31cc2781a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 12:27:57 2004 +0000
+
+    Remove proxy README details
+
+commit ece93a39d9b88e80aa702e137052980fd9fc9e8b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 12:21:17 2004 +0000
+
+    Remove XSLT config
+
+commit ae166973a7ad342554ec7cd39135561523a3083f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 12:19:56 2004 +0000
+
+    Bump version
+
+commit 213d52b0de82aa144159df657968a44cf9dafeab
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 12:13:32 2004 +0000
+
+    Documentation updates. Due to move of YAZ proxy
+
+commit 1b6019ff065a98af709be905adc6c08094471d57
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 12:03:35 2004 +0000
+
+    Removed yazproxy source
+
+commit b44f9237a703f1f88f0d2768e3e358110751bb5f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Apr 11 11:16:39 2004 +0000
+
+    Fix a few links
+
+commit 18121c0f9e62e59ddf42d295d4e0a9772b06af77
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Mar 31 21:30:45 2004 +0000
+
+    Fix a few typos.
+
+commit fae2c9f72685706f6f4373199edc98a5506f5a96
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 31 21:11:10 2004 +0000
+
+    No longer needed
+
+commit 4747b581a54bf1a0e80eefd324b3096b03399821
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 31 21:06:45 2004 +0000
+
+    Install etc files are installed in PREFIX/share/yazproxy
+
+commit f8b84c5392b7cd02004f72ced65adbac2bdee1a6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 31 21:04:47 2004 +0000
+
+    Puts Mikes abstract to README
+
+commit 916452d348a342be0b6bbc054d59bc8897fb2f79
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 31 18:28:05 2004 +0000
+
+    Rewrite windows compilation instructions. Add introductory chapter
+    (needs more beef). Put in GPL.
+
+commit 0ae7eb1f7101c29d5c088bf40aa26abc50c57913
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 22:26:16 2004 +0000
+
+    Fix dist. Use HTMLFILES instead of copy of *.html
+
+commit 459cab9da4ebc06fd201997256db147d114f1731
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 22:11:12 2004 +0000
+
+    Fix make dist for yaz.css
+
+commit 61636605c2f6832e509ec31be8fb6df6ff3d87a5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 22:03:56 2004 +0000
+
+    Use yaz.css for documentation.
+
+commit e694945c798867f4eb004fa0c4b8aed1feaac352
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 20:15:40 2004 +0000
+
+    Fix make dist for windows
+
+commit d6882222e05774e856588ca021527e8e8e5f641b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 18:59:41 2004 +0000
+
+    Check for gettimeofday.
+
+commit 961b990e1159f3396e11e20887bacf32dd56b887
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 18:58:40 2004 +0000
+
+    ZOOM C++ works on WIN32
+
+commit 2193539b01eb9b085af2c2c3e4aa18fe4ae4c5f7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 18:14:13 2004 +0000
+
+    WIN32 updates
+
+commit b200a151ba181895b6da93b37005c9a36ea84652
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 17:42:25 2004 +0000
+
+    First go for nmake makefile for yaz++
+
+commit c7e62c0cd5f11c28cf19e72078cc9e3d149b5668
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 16:51:32 2004 +0000
+
+    File moved from src to proxy
+
+commit c7caba704e90cd95f6312c46e357fbe1e2bc7314
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 14:25:41 2004 +0000
+
+    For proxy, avoid duplicate diagnostic 7: query
+
+commit f92cb38d46e1649e7eb0036368bb8d6275fcc8d8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 11:46:11 2004 +0000
+
+    Mention GPL license
+
+commit 33ee4177096aa1501e76ea7967fdfac7f0ecfb9f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 09:34:56 2004 +0000
+
+    Revise description
+
+commit b59e43f1f8f295851ac16db639336f6f3b15410a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 09:28:19 2004 +0000
+
+    Fix duplicate Build-Depends
+
+commit 5432f312615e7513003c06ff74dfcf48a6fcf4bd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 09:13:11 2004 +0000
+
+    Depend on libxslt1-dev rather than libxslt-dev
+
+commit b1ecb68a6b59dcaca5ce6d6470ac23e871ea1141
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 09:08:13 2004 +0000
+
+    Fix Debian rules configure to use --with-xslt
+
+commit 4b042ccab852026e35f59e06f4e300a2d8db0793
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 09:05:53 2004 +0000
+
+    Ensure proxy can cope without libxslt
+
+commit 0d9cb9da0dcc25161bfc04692bc57ea2cc32e803
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 08:46:36 2004 +0000
+
+    Fixes to make distcheck happy
+
+commit d03cfd1f6a2a85807e72b58b36a47e3f1000cc2b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 30 08:31:56 2004 +0000
+
+    Fix shlibdeps. Remove yaz++ package, since its empty
+
+commit b53748a283c8773b25349ab6b08372965697a691
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 29 23:25:48 2004 +0000
+
+    Proper copyright for proxy in Debian packages
+
+commit 36aa6d6f2ef35908b6953d7ea78a5ea620a68d57
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 29 22:48:31 2004 +0000
+
+    Add this for proxy
+
+commit 2c25ce513613784819fcb216c60d1584402e7907
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 29 22:46:50 2004 +0000
+
+    Move yaz-proxy to separate sub directory.
+    Change license for proxy to GPL.
+    Add packages libyazproxy, libyazproxy-dev, yazproxy.
+
+commit 779c379c70bf479073cc4968f6bf5ad35ffe6eec
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 29 20:00:07 2004 +0000
+
+    Rename a few files
+
+commit 40213edfa0408f88b008c3d1ee4a4f90dcdf2fb9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 25 23:14:07 2004 +0000
+
+    Tests as separate object implementations
+
+commit b1f8a12e7743258d4f9654157d212ffcd83ae241
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Mar 20 15:06:53 2004 +0000
+
+    More work on zlint_driver
+
+commit 1f792fe24ba797d92d1e896c8460b86747e20e6f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 17 10:55:25 2004 +0000
+
+    Bump to 0.7.12
+
+commit 0417b210a189991fbe65cd1a33d56ebd94a7c2c1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 17 10:51:25 2004 +0000
+
+    Use MODS v3 by default. Update to SRW/CQL 1.1 URIs
+
+commit 8530b032e409d5ffd8a1a40943dbd9b0e3c6e05c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 17 10:49:58 2004 +0000
+
+    Log XSLT errors to log
+
+commit 31d802a95fcaef8702ecf590bd5a3c4e377c9286
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Mar 17 10:49:22 2004 +0000
+
+    Fix log of incoming PDU from client
+
+commit 101bde0269d2cf94409230cb3f5a803284f9a5e5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 15 23:15:56 2004 +0000
+
+    Sync pqf.properties with YAZ copy
+
+commit d3d51bee2100324025f7530d4e3ff3502397fd83
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 15 22:49:13 2004 +0000
+
+    Simplify use of iconv for MARC records
+
+commit ae5fa376d18cb66d540fa46f98dad62f12774f2a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 1 19:12:14 2004 +0000
+
+    Fixed fix-up for omitted referenceIds
+
+commit f8f641aaf624ab2d522fba4f90f6180b0fc0a681
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 1 17:18:39 2004 +0000
+
+    Fix another bug with pre_init
+
+commit 76cd9bbe1a562c561e1ac35b24c8f1fe508bac93
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 1 17:01:52 2004 +0000
+
+    Fix pre_init to prevent spawn if it is already queued.
+    Version 2.0.15 update.
+
+commit 598464a40f5eea658ae9afafab11e5eaf0c1124c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Feb 27 00:42:57 2004 +0000
+
+    Make workaround for FILE handles for libxml2 on Solaris where
+    maximum is 256 on 32-bit systems. Unix fd handles are OK.
+
+commit 52c508231229ecb75e754b8eb51d5138661df6ff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 26 23:43:07 2004 +0000
+
+    Take into account spare sessions in load_balance
+
+commit 66c2f99c117f21e0a3197fa66134fa4b22ee7ad4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 26 23:42:27 2004 +0000
+
+    Make more noise if select fails
+
+commit 93bb0f1286e4d88aa5d17a9c01fd36cf17732456
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 26 23:41:58 2004 +0000
+
+    Work on smarter zlint OO model
+
+commit 38196e4ea192d3bb4174fae39c21178454b76883
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 26 14:37:50 2004 +0000
+
+    Remove exclude-result-prefixes
+
+commit 6cfac50c13a50d5097b0736228f1983c065f692d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 25 08:19:48 2004 +0000
+
+    Debian changes upstream
+
+commit 7135827624487769265cb57cb62800fd74fb0f7f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 25 08:19:01 2004 +0000
+
+    Prose changes about zlint
+
+commit ae80e89d7132c22f44d2bd62a3df7e536e2cd028
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 25 08:17:52 2004 +0000
+
+    put zlint in prefix/bin
+
+commit 203c514721559a0573ca4ec492f968249479c5f5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Feb 24 20:55:56 2004 +0000
+
+    Deal with init message sizes for reuse sessions
+
+commit bb4eea05b9f1c33761df2bc542d76cb1dbc3e35f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 23 13:29:37 2004 +0000
+
+    Fix MODS3 stylesheet
+
+commit 4365cd2c165aed75c31d28185f31742cb2cb79c7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 23 12:55:02 2004 +0000
+
+    Updated to new identifiers (again). Make SRW DC stylesheet.
+
+commit 1058c69f0553a45a29a8386f6df4eac68ba7271c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 23 11:03:28 2004 +0000
+
+    Update year
+
+commit 4cfab63fbf4fe2ade37ce8aa3b6f9d3116d6af46
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 19 15:25:46 2004 +0000
+
+    Make more desent display of test progress.
+
+commit 54a56c169822db4ac2e506e2ac3381c8b1f836dc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 18 22:17:58 2004 +0000
+
+    zlint part of Debian package
+
+commit c7f4ae9aa757bab61d276d22656028827ab4e268
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 18 22:12:45 2004 +0000
+
+    Added .cvsignore
+
+commit 0e5966272921cc8253e4395fcf985d490f27de0b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 18 22:11:41 2004 +0000
+
+    Added zlint
+
+commit 38a84b0abd51728d3fc7c3451f764d2cb81994dc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 16 20:12:30 2004 +0000
+
+    Require 2.0.12
+
+commit ce48a6f9dd37b10176280e8a05b345e396471096
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 16 11:32:22 2004 +0000
+
+    Towards 0.7.8
+
+commit 8a5c15d9e63b15fa2ea9399521a7eeacebbab13e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 16 10:47:37 2004 +0000
+
+    For yaz-proxy, allow maximum number of files to be specified (setrlimit) with
+    option -n for yaz-proxy. Log the number of max files with getrlimit always.
+
+commit 008ab62580aa7f271e95871b9d2df2ac9e7a7a28
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Feb 15 16:41:14 2004 +0000
+
+    Include recordSchema for explain response record data
+
+commit 3d55cc18bc039fd23b26d8ef109f9d910078dedd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Feb 14 20:40:16 2004 +0000
+
+    Align configure help
+
+commit 3cbb17ba89f52d01d20df67073fdbc8bbda4ae0d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 12 20:40:22 2004 +0000
+
+    Fixed SEGV bug that occured when duplicate init requests was received
+    and no cached init response was available.
+
+commit c7bf3da80883df6206451d763edfdf41f6f82f61
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 12 20:35:06 2004 +0000
+
+    Make MODS v2 default
+
+commit f721e0174521168b48ca8a64fc7cdc98e3f7c962
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 12 17:17:31 2004 +0000
+
+    Log max/cur files using getrlimit
+
+commit 8e8d3f62f986eddf6b76755b0e34b27969bcb91b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 12 16:53:15 2004 +0000
+
+    Add MODS version 3 support.
+
+commit d50e245ee74a307d24877e7ff79f55f90c522028
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 11 12:44:55 2004 +0000
+
+    Build dpkg yaz++-doc too
+
+commit 8d0d83a86d852bfe5166f4f6913c7c5a9817b510
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 11 11:35:27 2004 +0000
+
+    Debian package
+
+commit 8bc5c9154d4c59571b6a6f19d8082a230d3c8a8a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 11 10:01:54 2004 +0000
+
+    Separate libs. Update version
+
+commit 60dc867f7336f2ec8888a2f7a60cd26ee22c65a2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 11 10:01:54 2004 +0000
+
+    Separate libs. Update version
+
+commit ab004a9c8d93f4f906ce643e306efe9dece8a2ce
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Feb 10 15:02:19 2004 +0000
+
+    Bump version.
+    Fix problem with fix-up referenceId's. Keep-alive when receiving SIGBUS.
+
+commit 388699ce5561ac014de786d5a06c4bd5eb8ac8a5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 5 14:18:34 2004 +0000
+
+    Update yaz.m4
+
+commit ede88f279b65d43cb53204dc9d15ff79d57680f6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 5 11:56:10 2004 +0000
+
+    Use new yaz.m4
+
+commit f55d2ab23373a908464014f00e8847b8bd98e0a1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Feb 5 10:02:06 2004 +0000
+
+    0.7.6
+
+commit ab79448b67b5b423fe2d5c68124e94ad27fc8ecd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 2 15:11:40 2004 +0000
+
+    Set referenceId for response PDU to avoid unknown IDs for Voyager target
+
+commit 3eb9c4a4462d9ea7630750b541c253b145309521
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Feb 2 11:17:45 2004 +0000
+
+    Make timeout(0) wait until write mask is cleared
+
+commit dfc3beabad1354d86797de9de702116ae229ff94
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 30 12:02:21 2004 +0000
+
+    Remove message. And fix bug introduced in previuos commit
+
+commit 7d8da71f9935837bc4c8dc86266c9b29fd0d35c4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 30 11:45:25 2004 +0000
+
+    Fix bad COMSPEC generation (for missing recordSchema in SRW).
+    Perform only one XSLT conversion per socket event (to reduce blocking).
+    Fix bytes_sent/bytes_recv for HTTP mode.
+
+commit 9eae799a402bdbb99c889b729fe87491f5ff85ff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 30 01:30:30 2004 +0000
+
+    Log libxml2/libxslt errors in yaz_log
+
+commit a911c46375f7bc2400195b499a0a73045716f6a9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 30 00:47:17 2004 +0000
+
+    update todo
+
+commit c1106f71355e2e89dd95e8f847b1f871642344db
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 30 00:38:28 2004 +0000
+
+    Fix HTTP Close
+
+commit 58b2428baa58dfad26e91d3c7a0f70c765e9a963
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 29 21:33:39 2004 +0000
+
+    Fix bad reference
+
+commit f3121db1cc269aa081e0a9b42f851e9da8c9f60e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 29 20:53:34 2004 +0000
+
+    Update proxy to work with SRW diagnostic code as a URI/string
+
+commit d84b43231c7c5b0786e9aa62d0f7ca7ecd83bdb5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 29 20:28:41 2004 +0000
+
+    Use AM_LDFLAGS instead of LDFLAGS
+
+commit 4ffb5c5f0c0c64799a89f7961fd553ae8ae4854b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Jan 24 21:33:27 2004 +0000
+
+    Display better info for encoding/decoding failures
+
+commit c17f6990d7c401ff9a9f5efa574981e26f5318cc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Jan 24 21:32:31 2004 +0000
+
+    Remove cache size log message
+
+commit 3543c8e0a0f99d2b59c69a2b3fa97edf86a14cff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Jan 24 21:31:59 2004 +0000
+
+    Throw 'unsupported transfer syntax' / 'unsupported ESN' properly.
+
+commit 6d8267d382fc2e1f7584ab12283217db0af678ba
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 23:45:52 2004 +0000
+
+    Update it
+
+commit 64584e7fd77bb392f444986f0d0472cc66fd658b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 23:44:58 2004 +0000
+
+    Multiple explain records may exist for one target. Proxy checks contents of
+    database element in explain record to validate database.
+
+commit 9e872d31b084b28bcc4e3f1744511af7c9cd6479
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 15:59:47 2004 +0000
+
+    Incorporate new stylesheet
+
+commit af7b189f58a1859aa6abe1f032fbd112f1496b1d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 15:48:36 2004 +0000
+
+    Changes
+
+commit ba8baf4a81c36b6a79d400c2594c4b01b8ec9b7e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 15 15:47:52 2004 +0000
+
+    Negotiate Z39.50 options & version properly
+
+commit 1b73b30c27af204acc67f4d2deae1765fd3caf21
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 14 12:14:13 2004 +0000
+
+    Reconnect on dead sessions to target if client session is active.
+    Fix bug with "present request out of range" if result count == 0 for SRW.
+
+commit a0df8d2655255428841849ac544ad47bf714f690
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 12 22:35:59 2004 +0000
+
+    Use xmlDocDumpFormatMemory to keep white space after XSLT
+
+commit 30c77a56e7ce7a6c5a9c98c4149f1df3a1db1b31
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 12 22:35:26 2004 +0000
+
+    Properly initialize libxml2
+
+commit 21ae3b472a54629d9c231e6b65ef560f5b882666
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 12 21:02:42 2004 +0000
+
+    Use xsltParseStylesheetFile rather than xmlParseFile &
+    xsltParseStylesheetDoc to avoid loss of white space in XSL file.
+
+commit a57254683d8adfdd6c3617cbcb06fc3b6138e602
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 9 18:11:15 2004 +0000
+
+    Picky SRU decode. Fix leak for XSL code. Throw better diagnostics
+
+commit f417329d8e9bc14043ff66a82adec187c4c47018
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 9 14:04:43 2004 +0000
+
+    Add explain NS
+
+commit efb41657fc33883e6520fa571c5a944106271ec5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 8 22:54:52 2004 +0000
+
+    details for some SRW diagnostics
+
+commit 2d032227d603ed28d5c57ae5a3a2992328010272
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 22:28:08 2004 +0000
+
+    Return diagnostic if recordXPath is met
+
+commit aa7a95a1c8d579f7c5f339f1bdece2e53424de30
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 22:19:05 2004 +0000
+
+    Send diagnostic 7 for missing query
+
+commit 509f0f1303d24df2dc6b26f36f17b55613c2bdb7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 21:29:26 2004 +0000
+
+    Honor stylesheet
+
+commit 1b43dc0c51ca599897b06fc43a74ea2408671d3a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 21:04:10 2004 +0000
+
+    Use z_soap_codec_enc_xsl
+
+commit 63dee45cb799be569d14461b4535a75bd95b6e4d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 20:56:02 2004 +0000
+
+    Fix a few warnings. Update for new z_soap_codec_enc prototype
+
+commit f46402d4579ab57d0a17f52e2eaa97db5d209f38
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 20:55:13 2004 +0000
+
+    Fixes for explain record
+
+commit f677d1a24225136059bc698fc36c5505bc89534e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 14:40:41 2004 +0000
+
+    rec.id
+
+commit 1e96b511cd067384af310b55dd875825313a8a53
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 14:31:53 2004 +0000
+
+    Changes
+
+commit 4573b28c14bdac226bf77dbb10587cd4da1b3d85
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 14:11:10 2004 +0000
+
+    update TODO
+
+commit 64db1e9c3642304d8c9230dabe6c3eb61a9d5104
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 14:07:00 2004 +0000
+
+    Make more proper explain
+
+commit eca406342a6af973b7b8687e739b3ebc2d8a18c5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 13:40:06 2004 +0000
+
+    Get rid of a few warnings
+
+commit 41f4a73b7d1b6ae2dfe3416dcc26d8c4232ac227
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 13:28:53 2004 +0000
+
+    Make XSL and pqf.properties part of dist
+
+commit bdb2d883c30acafdc7ab73753015b24c948af810
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 13:26:16 2004 +0000
+
+    remove yaz-proxy-ka.sh
+
+commit 91448f60da6e5c83dab8e8acb5ae71819c1bfb3a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 13:24:12 2004 +0000
+
+    Always return full schema identifier in response
+
+commit 15c4ab2ad6c4c449514c3d1d433315a71231e735
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 11:49:03 2004 +0000
+
+    Mention libxslt
+
+commit 113c16a5254c24ec5dfc1b72a2b124f0bd356501
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 11:37:45 2004 +0000
+
+    Fix logging of sent apdus
+
+commit 9d577e365bb10ae1bc0b3e4ee76bc0f888896d4f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 11:17:05 2004 +0000
+
+    Remove debug yaz_log entries
+
+commit 1cfab015d330b201317e6437fb144c9ea4cb2cd6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 7 11:10:54 2004 +0000
+
+    Deliver recordSchema in response
+
+commit 6019cb520cb877fa162d5915f9b578609cd7074d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jan 6 21:17:42 2004 +0000
+
+    Handle CQL diagnostics better. Use present always for SRW-to-Z.
+
+commit 277e55dae549f6fa6b9ad22d8ebd89af53bcd71b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 5 11:31:04 2004 +0000
+
+    idleTime, timeout (0) sets immediate timeout; -1 disabled timeout.
+    proxy forks and checks child exit status and forks again if necessary.
+
+commit 15572200f9db45bc7115f3d0930992010603c68b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 5 11:30:17 2004 +0000
+
+    set pqf
+
+commit 3c811b0b057256dcb402d2683582f7308fc701f9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 5 10:00:05 2004 +0000
+
+    Set pqf.properties
+
+commit 265587c6b7c73ef7a502803b54395ef847eb03f2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 5 09:31:08 2004 +0000
+
+    Schema conversion. Use libxml2 and lots of other updates
+
+commit bc05c522e728c4772ef3ed268fc3aca0b2e1f1e4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Dec 22 19:01:34 2003 +0000
+
+    Remove unnecessary log
+
+commit 7df9354855b031f0505b84e0c20d2dcc000a54be
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Dec 22 15:16:23 2003 +0000
+
+    Bug fixes. Explain document in config. Logging changes - dsp elapsed time.
+
+commit 4c287a6c8de2a59e1b9d249c0166bfb6c37cd571
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Dec 20 22:44:30 2003 +0000
+
+    SRW/SRU 1.1. Bug fixes. cql2pqf, explain, zeerex.
+
+commit 9ec219ff60631d2545f8595d0ad51811007d962b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Dec 20 22:42:53 2003 +0000
+
+    Fix leak in zquery2pquery
+
+commit 307a8638d6429b0f77ad762d52309c550e45648c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Dec 16 14:17:00 2003 +0000
+
+    SRW/SRU protocol support. CQL->PQF map for Z39.50/SRW/SRU
+
+commit f7bb8a2528c7c1552ba255388eb246267c252250
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Dec 16 11:26:42 2003 +0000
+
+    2003.
+
+commit 39d361df694b13d711bbb1ad2f61b18a8b68caf9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Dec 16 11:26:14 2003 +0000
+
+    Timeout event was not fired when select returned I/O (res > 0).
+
+commit e66e1480f40a782000c79c76815ac25a691b661d
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Dec 8 14:37:23 2003 +0000
+
+    Essentially identical to the canonical ZOOM client listed on the
+    ZOOM web-site's C++ Binding page.  Apart from formatting tweaks, the
+    only different is the use of the stupid "std::" prefix in front of
+    all the strings, couts, etc.
+
+commit a13324ae6587c8ca73748264b7cc2dea51c2d862
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Nov 27 10:35:00 2003 +0000
+
+    Ignore autom4te.cache
+
+commit 0740a9166f0b29ece0e9f4bdc003e2de267751cb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 25 22:00:41 2003 +0000
+
+    0.7.3
+
+commit 7e3e46d9a207d1c6d56704b64c2ebee58b170795
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 25 21:54:18 2003 +0000
+
+    Fix attribute check
+
+commit be307dc5e38d90ffa1596f495d9ec2f2115c6dc4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 25 21:54:02 2003 +0000
+
+    comment one option out
+
+commit 9e1bd9899f0a7d7e7c0a9097ffb1ff64db2627c9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Nov 23 18:39:35 2003 +0000
+
+    Spell fixes
+
+commit b0e80dcddb94c00391505d78f2f79b42469af14e
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Nov 11 22:54:41 2003 +0000
+
+    Ignore generated files
+
+commit 89a060d93d5f6f7bddc56463f147af7c750d7634
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Nov 8 18:51:10 2003 +0000
+
+    If pdu max >= 60, penalty wait is 1 second rather than 0 (no wait)
+
+commit 32cb4b82f46179c4af7986e004f0f05cb0c13dc9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 12:35:37 2003 +0000
+
+    Added comment
+
+commit 624453e6dc1e47c287d44a7692cfc0e645698e74
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 12:20:06 2003 +0000
+
+    Describe -l
+
+commit b3557319e30d8f05fb0383fe5ca76857b8f17f64
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 12:19:23 2003 +0000
+
+    Slightly changes options usage
+
+commit 28897f8b6f8f69386086fb0b9f4f564d97d579a7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 11:19:54 2003 +0000
+
+    Proper check for exit code in keepalive script
+
+commit 5d130acdf40229a09196be672196554b0bbb3ba5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 11:18:51 2003 +0000
+
+    Describe option -u and -p
+
+commit 2c74192108679a47afccf2732041c196745c0d5b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 10:33:01 2003 +0000
+
+    Beginning work on keepalive script
+
+commit d8c09f27e7a06712a0c76adb1ff3a366fb69edf0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 24 10:21:23 2003 +0000
+
+    Fix attribute type checking
+
+commit ab42ade0e6fe70998e8fe70338b2d78008d388f7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 14:19:16 2003 +0000
+
+    Move config.xml, yaz-proxy.sh to etc
+
+commit 3982c9ae0fea46655dfaac872ff67b6e65a26bfe
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 14:12:22 2003 +0000
+
+    Use printf instead of echo -n
+
+commit dfa2a32a991f1b94dcb1d6e0367374c60f672830
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 13:59:37 2003 +0000
+
+    Fix single log entry
+
+commit 9cecf3bd42e22746586731a315eaeea7a847b27e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 13:49:58 2003 +0000
+
+    Fix a bug WRT APDU logging
+
+commit ac677d6472b6c53bde8776529ab200ed285aaad2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 13:25:27 2003 +0000
+
+    Send HUP on reload - not INT
+
+commit b7f5f9763615bc85f161b314399102a6804a5e1a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 13:00:35 2003 +0000
+
+    Set signal again (otherwise Solaris stops)
+
+commit 7b05ec98b5a3227967c82f601a1c06ffd5c6dee6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 12:14:48 2003 +0000
+
+    Change owner of log file WRT uid setting
+
+commit dd037ab237aa2fcc2885b744ece43a4672297306
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 11:57:23 2003 +0000
+
+    Fix syntax
+
+commit 1cf760aa1600199b8a9acb4ccaded655f6903d62
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 11:45:08 2003 +0000
+
+    Implement option to change UID (-u)
+
+commit ea5275ed931fa06ac765dfb49e5af2036a6ec8b3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 10:02:14 2003 +0000
+
+    proxy.sh start/stop script
+
+commit 550c148a623dd9c4dee6f2b065fba884785c61be
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 09:10:12 2003 +0000
+
+    Remove log message
+
+commit 72ab66893bb6ab593313e144d03bf7ee0806b9f0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 09:08:52 2003 +0000
+
+    Implement -p pidfile option
+
+commit 0e25a951f34f16c4bcc19a5b4e60686601adf63b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 08:48:35 2003 +0000
+
+    Check missing member
+
+commit 72dafa4664643302f11c55ad4816e15b8765a3c2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 08:46:55 2003 +0000
+
+    Omit check for piggyback
+
+commit c04346b33f6ed8da76ab1924d5708ec8786d3cd9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 23 08:46:17 2003 +0000
+
+    voyager/loc sample config
+
+commit 92c0519af66131a46fbb398ce037009be2e8d0c5
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 20 18:31:43 2003 +0000
+
+    Better reporting of statistics. Handling of ODR decode improved
+
+commit 50fbcf20ab48480e819ec5aef312a72c684bf213
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 16:10:43 2003 +0000
+
+    Logging options may be configured in config file
+
+commit a5b1e5653ae9b27e85c6fad5bec42b6fc5156fcb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 13:40:41 2003 +0000
+
+    Start work on log options
+
+commit 21a225e7679ccbdd471508cacebb30592e7f5ad9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 12:07:16 2003 +0000
+
+    Update man page. Mention SIGHUP.
+
+commit f3fd0f268287ca2508f201360cf98623db1e4032
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 11:43:37 2003 +0000
+
+    Added const to avoid warnings
+
+commit 6acf28a0195560e01bac84460171b54f176a0d92
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 10:26:58 2003 +0000
+
+    Add const in a few places to avoid warnings
+
+commit 107d331342b256bb66cc37583c2dac4550306b8c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 16 08:28:10 2003 +0000
+
+    Fix C++ compiles on newer GCC
+
+commit 9b0e1609c6094b03dbaf6c6f2d0e7e37543d2b93
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 14 20:19:43 2003 +0000
+
+    Better check for piggyback/record syntax check
+
+commit d94ff2fae57f9d9ef58d6bed35fbd308474adad8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 14 13:48:54 2003 +0000
+
+    More config file documentation. Mention ulimit
+
+commit 8622d9bdb0b6c5880cbeb80cf94911719bb80660
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 14 13:48:26 2003 +0000
+
+    Minor changes to sample config.xml
+
+commit d7ed1a9024ed29911ac5ce2a58fb4996de63bf46
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 13 22:38:07 2003 +0000
+
+    Do not call pre_init in client::shutdown. Only in client::timeout
+
+commit 4b58a5d2d97f7ae989a2d31475af52de9c47a06a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 13 22:31:40 2003 +0000
+
+    Update yaz-proxy usage
+
+commit ee82f374504c55218b5d19abfef422a8e20a2793
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 13 21:30:59 2003 +0000
+
+    proper Id
+
+commit a0954355a5d3cc8685283d2102dec4b6d4284eab
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 13 20:31:12 2003 +0000
+
+    More about proxy config.xml
+
+commit 4d4dc93f4044cd685b6e8e2db7a3cd73eb36b7ce
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 13 19:16:28 2003 +0000
+
+    Preinit facility for proxy
+
+commit d6ccbcb18dd9b47c7448a9e10df37b64fea4fa84
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 10 23:10:28 2003 +0000
+
+    WS
+
+commit a21df16431e6ff361fb9abc4f87f58b575e7317f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 10 22:22:51 2003 +0000
+
+    Fix HTMLFILES
+
+commit 5554ddf9c4d9670aaaa8f8b9ce6def1dadff3c96
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 10 17:58:28 2003 +0000
+
+    USMARC to MARCXML conversion. Check for reconfigure in more places
+
+commit 7fc0fddcb85cd64461c7b3dd3e68791eb88b40be
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 10 12:37:26 2003 +0000
+
+    Graceful handling of comstack creation failure
+
+commit 30bb2a0ef23729acb4b5d52d18a186eabe17a305
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 10 10:50:37 2003 +0000
+
+    Deal with comstack that cannot be created
+
+commit c6763d9a3455defdc959a7a434eff7323349679d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 9 16:06:42 2003 +0000
+
+    Towards 0.7
+
+commit cf75ac8890f84648d5960d4b07fea7aab9a6eff1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 9 12:11:09 2003 +0000
+
+    Log request number. More configurable keepalive with pdu/bw limits.
+
+commit 79a9e68c4b373be7384552c58110f9ae28656b49
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 8 09:49:05 2003 +0000
+
+    Prevent multiplexing for cookie sessions
+
+commit 8cd77956b745e79b984bc0c9b74989aeae8dd49d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 8 09:32:48 2003 +0000
+
+    Multiplexing
+
+commit 3925b97e468538ef3394b99896e19ac5d3120b5f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 8 08:52:59 2003 +0000
+
+    Limit record cache size
+
+commit 72422e361f3ffd16766ff80bef553de08ea2f741
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 8 08:15:01 2003 +0000
+
+    Syntax validation. Log implementation stuff
+
+commit 095a4b386f206f362c6cdc1fb0f05ab6442fa6ff
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 6 19:32:03 2003 +0000
+
+    config.xml part of dist
+
+commit c33e210d2827f71ab8bf61c36662425809f7d933
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 6 08:08:49 2003 +0000
+
+    Allow ranges for query attributes
+
+commit 0b89dffba19f762e1d34455f3030d8b8deea2db4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Oct 4 06:44:16 2003 +0000
+
+    Fix non-libxml2 compilation
+
+commit 556fb95fdd5d9c25772ad2693abc33966252bdea
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 3 13:02:02 2003 +0000
+
+    Header
+
+commit 02873e733a979cc98c13b24c934a8082adf27812
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Oct 3 13:01:42 2003 +0000
+
+    User-defined error handling for queries in proxy
+
+commit 28588b9224eb5189af32b10f440ef2a917a05ea2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 1 13:13:51 2003 +0000
+
+    Proxy with QOS support. XML config. Better logging
+
+commit 46d33593562f66b4a074a428e9c8c1f2e94fa4ad
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 24 18:07:31 2003 +0000
+
+    Add missing YAZ_EXPORT (for Windows)
+
+commit 566650da59cb3b83840321e1921714dcc3d66cb7
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Sep 23 16:26:16 2003 +0000
+
+    Fix syntax of constant string array
+
+commit 6994627956b842f4cfe5474bfd406a1c1844a32b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 23 09:12:42 2003 +0000
+
+    Fix Windows Compile
+
+commit 2e5110dca3b9b40f717e9595572cc824d8e011cd
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 13:06:27 2003 +0000
+
+    Use NUL-transparent string-constructurs, thanks to Phil Dennis <phil@booksys.com>
+
+commit 076a2e8b68b2a6efd9494f3e61906feab77f7533
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 13:04:52 2003 +0000
+
+    Destroy half-created ZOOM-C result-set on failure, thanks to Phil Dennis <phil@booksys.com>
+
+commit 0ed5798f71f8542f27243de3be9a38b2efac49de
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 13:01:54 2003 +0000
+
+    Big simplications in use of base class, thanks to Phil Dennis <phil@booksys.com>
+
+commit 8b20b516ed31d6b07fcfccb703d9e91ad5ed611b
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 12:56:09 2003 +0000
+
+    Constructor for base query class, thanks to Phil Dennis <phil@booksys.com>
+
+commit 450d89d8c42f29b61d9e2a47d9b56164c11b565c
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 12:45:26 2003 +0000
+
+    Change some references to actual objects toi , thanks to Phil Dennis <phil@booksys.com>
+
+commit 57b7db2259edf3522ae73f3198eab36c888d5c6f
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 12:30:01 2003 +0000
+
+    Thread-safety and removal of extraneous logging, thanks to Phil Dennis <phil@booksys.com>
+
+commit 3f1c0add4578af5dfe7257bf063b55cdf1b2638b
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Sep 22 12:25:20 2003 +0000
+
+    Fix reosurce leak on connection failure, thanks to Phil Dennis <phil@booksys.com>
+
+commit 2cd894532d476c843a58c0ff159023144c647730
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 4 20:11:03 2003 +0000
+
+    Win32 fixes
+
+commit 0b54af6c274c04b10e6b93bb3a8a82463ac42b7c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 4 19:42:35 2003 +0000
+
+    Towards 0.6
+
+commit 3e85e9f144d417835d0a6d46bc1526ee3c655078
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 3 11:30:26 2003 +0000
+
+    Output connections set to 150
+
+commit 8d3a09bb596ace1743c959aff7facd3d73257d79
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 3 11:30:06 2003 +0000
+
+    Fixed handling of cookies so they can be of any length.
+
+commit bf1858437c560e02a0e8073b1b33bf7de98019bb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 3 11:25:08 2003 +0000
+
+    Cookie can be of any length.
+
+commit 5053dee0c4d74ee87d8068fc1230eb721262e786
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Aug 28 18:46:54 2003 +0000
+
+    Fix for no preferredSyntax Set
+
+commit f210f2580a43fd57b72a5db7d78688b5b17f19c8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 25 19:28:07 2003 +0000
+
+    Dont log cache match
+
+commit 36e5968d005bb3cdc7b045bfccfe1a6aabb4c54e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 25 19:27:36 2003 +0000
+
+    Fix bug in PDU flush/write code
+
+commit 7bd1f8f00ec4db97bbe5038d22c216b27319dfbf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 25 08:57:01 2003 +0000
+
+    Use compspec in match in record cache lookup
+
+commit be8de1a2cca3c7162563ddfe524ad4e389758150
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jul 18 13:27:20 2003 +0000
+
+    Record cache. syntax used for matching. Compspec is not (yet)
+
+commit 6807f0e768d9578ceefca99fd1b59d98a9d4005a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jul 7 09:23:16 2003 +0000
+
+    Missing include of stdio.h
+
+commit 9e16963e0de7b8787b19162c6d09fb221ae8b3d6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 2 10:31:42 2003 +0000
+
+    2003.
+
+commit 5fdb42d6ff944b595fb765764de8191eefbb3d61
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 2 10:30:28 2003 +0000
+
+    Bump version to 0.5.1
+
+commit e0d15759d40a9b69bcc7170536d57d2b084c12d9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 2 10:28:51 2003 +0000
+
+    Fixes for GCC 3.2.
+
+commit 01126607d1b475f43b29548dbd98f199f8e9f57f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jul 2 10:25:13 2003 +0000
+
+    Fixes for GCC 3.2
+
+commit 1c579e7c96bf635658b0b1729cbf8c0a3b223b1a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 25 21:57:45 2003 +0000
+
+    Proxy now closes socket when Close PDU is received from target.
+
+commit cf71a6f3494d721a1d7bd71f6bc0e4080906fc6b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 11 22:08:56 2003 +0000
+
+    Dont set cookie in init response if it's empty
+
+commit b51e13a9b732fe2ca93044776d5e990dbf2a4c0e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 11 21:59:07 2003 +0000
+
+    apdu_name prints more names
+
+commit b4fc3004d73a0e964a99ef8641acc3ad9943fce1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jun 11 08:22:18 2003 +0000
+
+    close on shutdown if proxy to target is waiting
+
+commit 6da656c228075f9729108d071ce97bbb78725f68
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 10 07:18:50 2003 +0000
+
+    Prevent automake warning
+
+commit 3293084bd0b889ce7a3a87517f40e985ad2eb7ef
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jun 10 07:16:38 2003 +0000
+
+    disable-zoom configure option
+
+commit 8c594d2cb1d5f9a3042883763fbdf846ba0eef70
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jun 9 22:20:39 2003 +0000
+
+    Allow keep alive for anonymous sessions
+
+commit 522e22bcfa136cc57a437d63f07f363820fb51cb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 6 12:09:53 2003 +0000
+
+    Call automake twice to avoid missing depcomp
+
+commit 477a7b9b2402c2391cfa61033accac6ef671ac00
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Apr 24 12:24:39 2003 +0000
+
+    ignore html
+
+commit 3ec2613d344b87b1f0d7506ab4a51c353e693c99
+Author: Marc Cromme <marc@indexdata.dk>
+Date:   Wed Apr 23 12:57:25 2003 +0000
+
+    doxygen file added to make html source code documentation
+
+commit 929ee1e0accc079beb8b2db96a104620daf3f718
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Jan 24 20:10:57 2003 +0000
+
+    Fix Present request out of range for proxy
+
+commit 3f60ee904bd42b93051a01ac88fadca365101368
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Dec 2 15:57:58 2002 +0000
+
+    Add an explicit ZOOM:: prefix to the catch(exception& e) clause.
+    Some systems (e.g. the Debian 3.0R0 that I use at work) choke on this
+    otherwise, saying that "exception & err" is a syntax error, while others
+    (e.g. the Red Hat 7.2 that I use at home) seem fine with it.  I guess
+    that in the former case, the second catch() block is wrongly perceived
+    as falling outside the scope of the "using namespace ZOOM" directive.
+
+commit e9a1f1ebdf02adef274a499228a3353ef0ab31af
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Dec 2 15:55:57 2002 +0000
+
+    tweak header-comment
+
+commit 0e9137189b8591385dbfc9daaa023085c7245194
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Dec 2 15:55:39 2002 +0000
+
+    ignore tkl.xsl
+
+commit 1ae786339f81e9c5e1f5ead9f141be6f2b2ee1a6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sat Nov 30 23:09:53 2002 +0000
+
+    Ignore .tkl
+
+commit 88e190489a5c483e5b860048aeebde41bf262962
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Sat Nov 30 22:33:21 2002 +0000
+
+    Bash the implementation into the same shape as the interface,
+    which I modified last week to bring it into alignment with the
+    consensus I reached with Ashley.
+
+commit 2f83e1ab14eab55ce68001e48c5808193ef6bf77
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 29 15:43:23 2002 +0000
+
+    Fix creation of yaz++-config when srcdir != objdir.
+
+commit 46f21f4503349b6c73e46a9c74c504b79cf2e8cc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Nov 27 00:58:28 2002 +0000
+
+    Update yaz.m4
+
+commit b293e6c20f37387dffefc2be5246c2e4c93ccf43
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Nov 26 11:13:40 2002 +0000
+
+    trival tweak for gcc 3.2
+
+commit 64248c6114c42391aa85cf70958707b5acdc3482
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Nov 25 13:33:22 2002 +0000
+
+    Changes to master-header to generate an "interface.h" equivalent
+    to Ashley's (bar some tweaks to comments, whitespace, etc.)
+    This will become version 1.3b of the ZOOM C++ binding specification.
+    
+    WARNING -- CODE DOES NOT COMPILE since I have not yet updated the
+    implementation to work with the new interface.
+
+commit b5df64a7419369d341107d57fed288584016a843
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Nov 14 14:41:07 2002 +0000
+
+    Autoconf macro in yazpp.m4: YAZPP_INIT.
+    Fixes for libtool archives.
+
+commit 93c571f61e1be1c66b8949d2250f53bb731e0fcf
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Wed Nov 13 12:39:28 2002 +0000
+
+    Visual Studio settings: Removed zoom files from yazxx.lib
+
+commit cc95c9a4185e03db7684c1fb46dce4ca0c5cdf87
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Nov 13 11:48:07 2002 +0000
+
+    Remove unused top-level diagnostic functions.
+
+commit 9e4ee094248d1c5a0fdb5b80ac86c290a36f7056
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Nov 12 22:43:56 2002 +0000
+
+    Remove vacuous redeclarations and redefinitions of the errcode()
+    method in the various subclasses of exception.  We can't remove
+    the errmsg() and addinfo() declarations from the subclasses,
+    unfortunately, because we have overridden implementations.
+    Nice one, C++!  What a very idiosyncratic language.
+
+commit 07d46508569f470e1577a66c0f7adce024b4eec6
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 8 13:38:45 2002 +0000
+
+    TKL documentation format
+
+commit 09b548942ec5d84e21d1bcdd1fac2fef0661f38b
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Nov 4 23:12:18 2002 +0000
+
+    Change $Header$ to $Id$
+
+commit 1e60b3fc076789fcfb65c936f83f25a2a09fc835
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Nov 4 23:09:54 2002 +0000
+
+    Remove Changes file -- no longer necessary to keep these old notes
+    as they are about to be immortalised as ZOOM/C++ 1.3a change-file.
+
+commit cab0bf4857384ead5b39b3f79d8309fefa62a166
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Mon Nov 4 23:08:49 2002 +0000
+
+    Subtle tweaks to ZOOM's master-header.  Cosmetic only.
+    These are so that I can use its generated inferface.h as
+    	version 1.3a of the ZOOM C++ binding specificiation
+    	with minimal unnecessary chnges from 1.0g
+
+commit 7b9c683505fd79972d6f3d397ac1c6e9040d2110
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 4 08:48:58 2002 +0000
+
+    Ignore php.
+
+commit 2a9b72d0cd2e4cbae4201e61d5e68250faff097b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 4 08:34:46 2002 +0000
+
+    Changes
+
+commit 9d407fa129dbbe7dd4fe88c11289dcff2f432fc0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 10:29:36 2002 +0000
+
+    Changes
+
+commit 963a6d9083a1310c54d907d1354a03f4ee5433c3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 10:27:37 2002 +0000
+
+    ZOOM C++ Windows install
+
+commit 9d009e335e0870d61c1507fc5186c0075d976840
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 10:04:21 2002 +0000
+
+    ZOOM C++ client project
+
+commit 6f5ccb50083cdd9e1fd3dd136f22751f24c5839e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 10:03:52 2002 +0000
+
+    DLL exports
+
+commit 53ff63f47c8a829973bcc313b96f8286152cfd5b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 09:16:26 2002 +0000
+
+    ZOOM C++ part of yazxx.dll
+
+commit c29b07cd7dc9cd6945bf79477e0ccd10252485bf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 30 09:13:12 2002 +0000
+
+    Visual Studio tweaks
+
+commit b3d26248b0c906f1a487d65aae5a2a33d91e8fde
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 29 14:00:18 2002 +0000
+
+    Towards 0.5
+
+commit 97b779d4ff438a905ca92193ed6a82e1f520c3a3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 28 15:19:32 2002 +0000
+
+    Remove ursula code
+
+commit ff30371654768d249cd4c92a9af26ae6bff8c65b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 28 12:16:09 2002 +0000
+
+    Remove private extended service URSULA
+
+commit bd3519d1fee5dbaa6afe53ebfd04d3e5b20b5d5a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 09:13:17 2002 +0000
+
+    Change title
+
+commit 0443bd364eba077e362d2369ab4b5679cf9d1cc8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 07:43:12 2002 +0000
+
+    Typo
+
+commit 6ffe763460015ab5a491dfe0cf40c054464d5c02
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 07:21:19 2002 +0000
+
+    Better ChangeLog
+
+commit eb44d61400d36668c80a60f3dae50888fbb898f4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 07:20:24 2002 +0000
+
+    Fix PHP doc build
+
+commit bb2f7a2c0beaa1c0dbfb928f6678a855bac9d48d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 07:12:39 2002 +0000
+
+    ChangeLog
+
+commit 770b06a381ee318a041362c3c97f8056f811f58c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 24 07:12:35 2002 +0000
+
+    Typo
+
+commit b4554e2111b1b0001d4184ba3e307bfb1001b337
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 22:12:37 2002 +0000
+
+    Towards version 0.4
+
+commit 9934354454c64545d7e2619259782fbf50445fa2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 22:12:07 2002 +0000
+
+    Pointer to yaz++ web page. Current version in header.
+
+commit f8c5e2fb0572a7a104f13416baf7a91b69f28464
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 22:10:35 2002 +0000
+
+    license within appendix (not section in appendix)
+
+commit 874c997b8c822dca1c9630bc5eb8ec0a73505a4f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:38:36 2002 +0000
+
+    Ignore all .html's
+
+commit c9acd7ad933aa30cf184f206ea89f38965ec5b5f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:35:07 2002 +0000
+
+    Typos
+
+commit 6237bfee0d4ae98813f4d52779eaf5b569d1f54f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:33:31 2002 +0000
+
+    Typo
+
+commit 8f059c007d31e0c6f3649af0948498538d9567c4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:24:19 2002 +0000
+
+    Fix for WIN32
+
+commit 43cc841d9cd8606d5abc780770985ae5d6214560
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:23:29 2002 +0000
+
+    YAZ++ API description
+
+commit fa86c86bd5aa9f16763706e7e6cd03bb9e4797e7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 21:23:01 2002 +0000
+
+    remove redundant class::
+
+commit 2da8d6f2d152854a95713c4ca52f6b72242d39a5
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 23 13:32:57 2002 +0000
+
+    Add ZOOM material; fix typos & formatting
+
+commit fb0faf97c0f1395c212357abfa2ae8d4fa45a591
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 12:46:06 2002 +0000
+
+    License ala YAZ
+
+commit c0cd3cdd115574c3da4691e73a2b60408e365af4
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 23 12:22:18 2002 +0000
+
+    Change "Yaz" to ID's preferred "YAZ"
+
+commit b3862e44bc71303c098d292b3ca7424daa9b2cd9
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 23 11:00:44 2002 +0000
+
+    more files to ignore :-P
+
+commit 83433ae599bf74603082679df28e178a2f3d0ff7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 10:46:54 2002 +0000
+
+    Less ugly ASN.1 (I now know youre on cvs loginfo, Mike)
+
+commit 1d6c68b72d0f922a20b31ee89388e56920ff3fc0
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 23 10:38:06 2002 +0000
+
+    fix case of Other[Ii]nformation
+
+commit e31c7057460f8c707301e00bf12065695b444995
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 10:15:17 2002 +0000
+
+    Idle time can be set via option -i
+
+commit 09b40382c41a29b7e3de2fa1a0362f25422a4367
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 23 10:14:11 2002 +0000
+
+    Man page for yaz-proxy. Section on encoding details for otherinfo.
+
+commit a03eabd5ecf775dc8ba57186fc906b4b698772ed
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 22 23:12:49 2002 +0000
+
+    Finished, I think.  Ready to release.
+
+commit da58ec3f2b9c0e5d15e4a022e7072f573784f9eb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 22 21:21:54 2002 +0000
+
+    Minor updates
+
+commit ed3df7ad6c5f8c8dbd9c1c97c5c9cd2957a24ad9
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 22 14:04:17 2002 +0000
+
+    Assign "id" attributes to each of the <section>s of the proxy document.
+    This is mostly so that we get nice HTML files generated, rather than a
+    lot of randomly-named x3454.html's every time we rebuild.
+
+commit 45278a327fad623114c05c7fa23b2aa000f14873
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 22 14:03:20 2002 +0000
+
+    Add the various generated proxy HTML files to the ignore list.
+
+commit c3a3af5bfb7172956d9e362887e42181fbcf1c2a
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 22 13:07:06 2002 +0000
+
+    Proofread installation documentation, fix a few minor typos, improve
+    markup, expand on some in-passing mentions, and add links forward to
+    ZOOM-C++ and the proxy.  I think this document can now be classified
+    as "finished" (though I've not yet read the Proxy one.)
+
+commit fc357a11b8c9b87534b3baa8c2c4d5b656f0998a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 22 08:23:57 2002 +0000
+
+    Fix typos.
+
+commit b50f535b0f54470857269d0b46620e6309a3276e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 21 13:39:03 2002 +0000
+
+    yaz-my-client, yaz-my-server not installed in prefix/bin
+
+commit 0604512365d9d3c223e147e416129589dabc31d4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 21 13:38:21 2002 +0000
+
+    Fix sgml-parent-document:
+
+commit faba80dab06ced169a5e16e24e2c3f43c867892f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 21 13:37:50 2002 +0000
+
+    Installation instructions
+
+commit c2f14867d5abde02ffe548fb0e269aa37756915f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Oct 21 13:37:31 2002 +0000
+
+    Actual documentation for proxy
+
+commit d97fd35b55974de2d6b14ad88239f1848887fd77
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Oct 11 12:19:09 2002 +0000
+
+    Add the promised sample program with error checking.
+
+commit d4f7be0106e960c6b299338477eb5eb257f1ebea
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Oct 11 11:54:23 2002 +0000
+
+    <sigh> more tweaks
+
+commit d45d178e35448f9150d03773e7f7281feaa32d75
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Oct 11 11:54:05 2002 +0000
+
+    memory-management hack
+
+commit 2510ebd5ecc7bb133221bacbc83adb9ec9354452
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Oct 10 22:51:41 2002 +0000
+
+    .cvsignore file for new "lib" directory.
+
+commit 994ac888aec8e10aaaf578687b4d554b300cb4fd
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Oct 10 22:48:10 2002 +0000
+
+    First finished version!
+
+commit 020de855bf3592a675caa3bc3e43c337b146b339
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Oct 10 22:47:51 2002 +0000
+
+    Move "secret methods" into "private:" part of classes,
+    and add "friend" declarations (ugh!) to make them visible.
+
+commit a598aaefa1dd2fb94b12cd367770345508a2740c
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Oct 10 16:16:38 2002 +0000
+
+    tweak
+
+commit 096af05205c65b89240855fc35ad3e898050d5e4
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 9 23:11:31 2002 +0000
+
+    Work on zoom.xml
+
+commit 9defb14486e9d0fa4c74e420912eac62cc2b99af
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 9 16:17:26 2002 +0000
+
+    Common lib
+
+commit f35634a8c44e53e2a183f995a563985fa87299a3
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 9 12:52:42 2002 +0000
+
+    Remove one more
+
+commit 72c45b0b232b0fe458eeb6a55beb1c87f0ca1dd7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 9 12:51:32 2002 +0000
+
+    Fix makefile
+
+commit ceb226cb18d96a6b3aa2dd6cff94aa27850362cf
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 9 12:50:26 2002 +0000
+
+    Rename yaz++ header files
+
+commit b79576d9970810e60bc7b34cc9af56f3139fa5d8
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 9 11:44:44 2002 +0000
+
+    use <synopsis> instead of <screen>; put synopses outside paragraphs (same style as Yaz docs)
+
+commit 71b4559301cfea14c05c594e106d4ac7967cec9a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 9 09:19:55 2002 +0000
+
+    zoom.h installed in include/yaz++
+
+commit b8248fc2b2eb866a23a677135deb4633cb1f3322
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Wed Oct 9 09:07:10 2002 +0000
+
+    Change the ZOOM code to generate and use "zoom.h" rather than "zoom++.h"
+    so that you don't have to #include <yaz++/zoom++.h>.  Also, tweak the
+    in-progress documentation accordingly.
+
+commit be5e415f7ca4d3b84d09e3f98b2c1bda629570c5
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:57:29 2002 +0000
+
+    Add lots of commented-out debugging code, all to try to catch
+    screwy memory-management semantics.  Since I couldn't find the
+    real problem, in the end I just made ~bib1Exception() a no-op.
+
+commit 30412ee501d06ecc3491e6c9405d8f34031591c7
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:56:17 2002 +0000
+
+    add some files
+
+commit 927890f041728f42cb5e1ed3646fce2f07b4f52c
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:55:52 2002 +0000
+
+    Catch exceptions by reference (not that it actually helps with the
+    memory management or anything, but it does seem to be idiomatic C++)
+
+commit cfcc5bf9872c83bf0628f007e36a1ed8143b5236
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:54:55 2002 +0000
+
+    tweaks
+
+commit 1357ec66769269f976ba205a0f58af74f1f0469e
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:53:55 2002 +0000
+
+    Nasty hack to ensure zoom++.h gets built.
+    There's probably a more automake-friendly way.
+
+commit 2ae9ebab1db8d27904766380a92ee49633f8a58f
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 23:52:40 2002 +0000
+
+    skeleton
+
+commit 6a3a4209d8ce89312f7f21abb059e35e64683fda
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 8 13:41:44 2002 +0000
+
+    Added zoom in SUBDIRS
+
+commit 30d6ea16e6ea8877db7b75d88a45bfedc14b7220
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 12:27:56 2002 +0000
+
+    Add to .cvsignore the names of the files you get by building the docs.
+
+commit 9ae0e2bb9cd69e3e35d0319e31e8a02478556e58
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 12:23:41 2002 +0000
+
+    Add Makefile.in to .cvsignore
+
+commit 993074fc8352e79107c584e928e538317af03c01
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 12:22:40 2002 +0000
+
+    Add .cvsignore
+
+commit 78a5adbaecfec6aa22c892fcd78a8101a9289f8e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 8 12:18:47 2002 +0000
+
+    Added Makefile.am
+
+commit 2ad40f2e15a4d6927833231b8dc6874b747fed2e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 8 11:55:57 2002 +0000
+
+    Docbook added. No content yet.
+
+commit b00bf07aea47740a3c6cc7033e3cc3f740b9a647
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 8 10:04:41 2002 +0000
+
+    zoom part of automake mess
+
+commit f76b09ad19705de4166684a1c9ff07af557008b7
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Tue Oct 8 09:32:23 2002 +0000
+
+    Add .cvsignore files for built files (e.g. *.lo)
+
+commit 5ed675e0effebe4b7816e1db060356a85d7757ba
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 13:00:58 2002 +0000
+
+    Use ResultSetId for lookup in result set cache
+
+commit 03a58bebb2575313e5fb1709f2105541caaed237
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 12:00:20 2002 +0000
+
+    Make buildconf.sh verbose
+
+commit 19bf0c849dab9319f646239a029eba39102ad151
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 11:59:56 2002 +0000
+
+    Version 0.3
+
+commit 911c48d1500fb1fe8d43da7507c4fd46bc95e2ec
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 11:58:13 2002 +0000
+
+    Fix init response so it is equivalent to that returned by the target
+
+commit c36ba47d8eb3202dfad0233c47c3e707c49bfd93
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 11:30:54 2002 +0000
+
+    Treat resultCount <0 as zero
+
+commit 0e4148ba1e09e25bea2fa1403bf720860a308082
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 10 11:30:37 2002 +0000
+
+    Added fflush for APDU log
+
+commit 1e15de12518ee28c4cd5298ab545c77092e57194
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Aug 28 13:01:41 2002 +0000
+
+    Prettier log
+
+commit f8e0abc7bbc095fd88e19c76ed142fa8f5f10d73
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Aug 9 10:45:30 2002 +0000
+
+    Remove throw()-specification comment from master header.
+
+commit 4391c9699f5a37b73d63ba157157e9221aec566c
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Fri Aug 9 09:03:37 2002 +0000
+
+    Aha!  $(CXX) is the C++ compiler in make's world.
+    So I can throw out my homebrew $(CCC).
+
+commit d7e5124c5980b34728b0c362f31a45fdc397f8a4
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Aug 8 16:21:06 2002 +0000
+
+    Add CVS header.
+
+commit fb113bcbf8398f8faa896529405909c7f8092b20
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Aug 8 16:14:26 2002 +0000
+
+    Add -ansi option to default G++ flags.  That detects that <string.h>
+    on my Linux system (Red Hat 7.1) wrongly fails to declare strcasecmp(),
+    so I am using yaz_matchstr() instead.
+
+commit 38cf7818581012c3a0f95e870ad8fdf625e7e7a4
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Aug 8 16:06:50 2002 +0000
+
+    Oops.  Forgot to change zerr.cpp to zexcept.cpp in Makefile.
+
+commit 7c6295779d21f882f9d53186c5a751cbf86b6c86
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Aug 8 16:06:08 2002 +0000
+
+    Rename error classes to exception.  Rename zerr.cpp
+
+commit 8e0f7888835eb1a84882b440209ec125ce5856c1
+Author: Mike Taylor <mike@indexdata.com>
+Date:   Thu Aug 8 13:31:54 2002 +0000
+
+    Added ZOOM.
+
+commit a1c32cb5086cc24b6ba776379016bf6adad47821
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Wed Apr 24 13:16:47 2002 +0000
+
+    Minor project file details
+
+commit b93c75bec555a4b1bd2428a3af826d154b7a47f7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 24 12:21:03 2002 +0000
+
+    New utility create_diagnostics
+
+commit 18e58bebefe391a91ffac537ad589deb2baea89c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Apr 22 12:08:07 2002 +0000
+
+    Encoding failed print in APDU log
+
+commit 8a1224da4d5c0d6bde27b39d1ec0f9b6ffa6aea0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Apr 15 09:43:30 2002 +0000
+
+    Using AM_CXXFLAGS instead of CXXFLAGS
+
+commit 9ced9af24735149c7d67ec79044428ba3adec7a9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 21 21:51:06 2002 +0000
+
+    Using cs_rcvconnect instead of cs_connect to complete connect.
+
+commit f45771ec3032b3ef67ec4c275da242e3c647b53e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 14 12:01:27 2002 +0000
+
+    Fix: proxy doesn't cache searches/result sets when errors occur.
+    New option -u that sets authentication info.
+
+commit 94881bc56aff2b24ead75ac5f9e14128570cf311
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Dec 21 10:50:22 2001 +0000
+
+    Fixed bug where timeout could be set to a negative value.
+
+commit 413fa20e2396875645fa715539bb13b5efa6217b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 12 14:33:09 2001 +0000
+
+    Added yaz-z-databases.h to include.
+
+commit ff656a4cd980e8ba6472f99e110c3b52d6a1ed86
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 6 20:33:32 2001 +0000
+
+    WIN32 update.
+
+commit 19db153df3124f15689496768049bb73c3011a69
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Nov 6 17:08:05 2001 +0000
+
+    New option -o <level> that optimization level (0 = no optimization).
+    Database names mutch match too before doing result set optimization.
+
+commit 966d1a0443071c2b75426d0214bfb9960c5c3fba
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Sun Nov 4 22:36:21 2001 +0000
+
+    Fixed problem processEvent which in rare cases return 0.
+
+commit b416df50f7dec326e96cd809220ea66a66044e88
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Nov 2 13:06:29 2001 +0000
+
+    Fixed bug in result_set_optimize where LSLB == resultCount.
+
+commit e55896f9cb43034c3e8743b51ef79936f5404bc3
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Mon Aug 13 17:08:05 2001 +0000
+
+    Lib paths etc
+
+commit c96f00d22f0af97ad7fd5d8687fa0b65b67de77e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 13 16:39:12 2001 +0000
+
+    PDU_Assoc keeps track of children. Using yaz_log instead of logf.
+
+commit 67b89f605099285483fe10770bbf49213c9f6a9f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Aug 9 09:01:03 2001 +0000
+
+    Added yaz-z-server-ursula.cpp.
+
+commit f53dbe9734f127ceaf4085c49ab5b94d63ce7802
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jul 10 12:55:40 2001 +0000
+
+    New Visual Studio configuration for URSULA.
+
+commit 3adb2cae057c7b9f85292c1cb1981c7f0dfb039b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu May 17 14:18:03 2001 +0000
+
+    New handler for old version item update for server:
+     void update_service0 (Z_ExtendedServicesRequest *req,
+                           Z_IU0Update *io, Z_ExtendedServicesResponse *res)
+
+commit bad13cae58b485b74d2404992178eff93482ed9f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu May 3 12:44:51 2001 +0000
+
+    Added yaz-z-server-update.cpp for workspace.
+
+commit 27f5d35959ef9720a628bb35aa58065ce1cbb85b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu May 3 12:42:57 2001 +0000
+
+    Added update server service.
+
+commit 30a319511d4583cbd1b6a0694e097ea1c88ee4c0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu May 3 12:39:39 2001 +0000
+
+    Added Update server service.
+
+commit 9a088f6097f4e6d48d6287e0067a5ff899633e6a
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Apr 26 17:51:56 2001 +0000
+
+    better ursula request (doesn't crash)
+
+commit 9775d3f49acfa25ffcb877af10d993ef1298c8d5
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Apr 26 17:30:07 2001 +0000
+
+    Ursularequest got more default data
+
+commit bff45f95576c8f14cb474d2026ce4f4e7fc2e917
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Apr 26 12:17:49 2001 +0000
+
+    Ursula stuff, mostly in the test client
+
+commit ffc71f400dd4cdb8e631186f8e31a93fc641abd7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 25 19:40:18 2001 +0000
+
+    Added refernceId handling for other services.
+
+commit c1010b52a964b99e1b9bfcf579d767d0b6bb8012
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 25 18:59:30 2001 +0000
+
+    Added referenceId handling for server.
+
+commit 50f38dcd58cdf62b3380710bdd7f23d6f88c555c
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Tue Apr 17 16:21:21 2001 +0000
+
+    Working on UrsulaRenewal, Request, and Update
+
+commit 840949ff9c95452ab42a70dc977097b613acf848
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Apr 12 15:12:10 2001 +0000
+
+    minor ursula stuff
+
+commit 790da7ea932ce2b5ee3d65abce82f9334cc70f3c
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Wed Apr 11 14:20:50 2001 +0000
+
+    minor
+
+commit 8bc1d0bdc866416424d9ef56bd16f9627688671a
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Wed Apr 11 12:33:42 2001 +0000
+
+    Working on ursula things
+
+commit 7a9cf0a84f1169b52469f736be7e98e7440eeff4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 10 10:48:08 2001 +0000
+
+    Fixed problem where proxy could cash bad result sets.
+
+commit 71130e9f57a28722e39b6c8cf9700b9e42fe9d7c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 5 15:12:24 2001 +0000
+
+    WIN32 updates.
+
+commit bd6d2417de1cb518dbc95a9808a9f46311dbc64c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 5 13:09:44 2001 +0000
+
+    Removed ursula dependancy.
+
+commit f316729783fa2f94a64192e2c7970cbd631d7b60
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 4 14:57:37 2001 +0000
+
+    Updated for URSULA.
+
+commit ba7a7aa994136b9bb5b775ad84192f96259bd9c0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 4 14:02:49 2001 +0000
+
+    URSULA / Z-ruth service.
+
+commit ce735e1c32f736035580b9b14f32e6d1319ee06b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 3 14:37:19 2001 +0000
+
+    More work ILL-service.
+
+commit b710e2fb2be5819d54ed7626066ff214833a1d8d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Apr 2 13:39:34 2001 +0000
+
+    Minor changes.
+
+commit 67260891a47e8b76c5a38b7f418e5daea31fbab7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Mar 29 15:14:26 2001 +0000
+
+    Minor updates.
+
+commit 45fccbade36f204550457dbb27b48d691f16d5aa
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 27 15:02:14 2001 +0000
+
+    New server facility scheme.
+
+commit 5238ea544d4a2b414592f1d503f5ed83f305b21b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 27 14:47:45 2001 +0000
+
+    New server facility scheme.
+
+commit bd71f8812ca0f38438733efc89ecce1f49dae9e7
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Mar 26 14:43:49 2001 +0000
+
+    New threaded PDU association.
+
+commit f304b5971574644559b065a70a0a964a87a55e77
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Feb 21 11:25:07 2001 +0000
+
+    Removed aclocal.m4 and added yaz.m4.
+
+commit 56d92bbfde918ba7c662588fabde1331210f003b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jan 29 11:18:24 2001 +0000
+
+    Server sets OPTIONS search and present.
+
+commit 7a8b8195358610868a183c6b72844c94dc317f2b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Jan 10 09:14:08 2001 +0000
+
+    Added more info.
+
+commit 086ea2d61dec722d6c556f94c76dbb7b55bf6d95
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Jan 4 14:25:25 2001 +0000
+
+    No SIGPIPES in windows...
+
+commit 30f08f188be4df68de05f64033cb5c7f757aff3e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 14 16:00:39 2000 +0000
+
+    Ignoring signal SIGPIPE.
+
+commit 5ddfd8539ebd230cd671d1b2cc639c83aa841722
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Dec 7 13:27:14 2000 +0000
+
+    Added -I. for aclocal.
+
+commit c9239584a02846acc5694505143973041b473cdc
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 20 14:17:36 2000 +0000
+
+    Yet another WIN32 fix for connect notify.
+
+commit 933909a6cfd5dcacc446f45e7217849b917abefd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Nov 20 11:27:33 2000 +0000
+
+    Fixes for connect operation (timeout and notify fix).
+
+commit cca0319ad9623fb9632960f9c5a52f6a153104e6
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Thu Nov 16 13:59:56 2000 +0000
+
+    Moved include file addresses for the editor
+
+commit 3b58e2f8d81f47c9c9cc86dbd2cdebf8621d8559
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Nov 1 14:22:59 2000 +0000
+
+    Added fd parameter for method IYaz_PDU_Observer::clone.
+
+commit f01703caba976a582cb23a03b4947d1b1068f8ca
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Oct 26 21:31:50 2000 +0000
+
+    Minor changes.
+
+commit 86433d4fcd24b068f362aecf0b1d1666d32ac6a1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Oct 24 12:29:57 2000 +0000
+
+    Fixed bug in proxy where a Yaz_ProxyClient could be owned by
+    two Yaz_Proxy's (fatal).
+
+commit 13c2d015252fa402b324b088bf7544632114f09c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 12:21:50 2000 +0000
+
+    Added buildconf.sh script.
+
+commit c0519c2ddb1b04a99695b22c70c436283ece4bb8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 12:21:00 2000 +0000
+
+    Removed option --source from yaz++-config script.
+
+commit 355215b6f2c914f2eb099dda88828b8f0c8cb001
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 12:07:07 2000 +0000
+
+    Removed a few files that could otherwise be auto-generated.
+
+commit aa25a8e0c579cfe5bef5f99ac58b68bcefae437a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 12:00:03 2000 +0000
+
+    Added configure and configure.in.
+
+commit e3133d2f2c580f76c9da2e7621c74a064f0955c9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Oct 11 11:58:16 2000 +0000
+
+    Moved header files to include/yaz++. Switched to libtool and automake.
+    Configure script creates yaz++-config script.
+
+commit b35b70078e2c4fb3af710cfc5b9319bfcc7073dd
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Fri Sep 22 09:54:11 2000 +0000
+
+    minor
+
+commit 71b6a2c41c24d62fb4b195893b63fc7e1e158adb
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Sep 21 21:43:20 2000 +0000
+
+    Better high-level server API.
+
+commit 8f70d891a14fc74ac17ebebb93c61719ad549aae
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 13 12:22:32 2000 +0000
+
+    Added LICENSE file.
+
+commit 9ada255ef9d4261a79d9ccae6c1bfedf456087ce
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Tue Sep 12 16:40:33 2000 +0000
+
+    minor
+
+commit 48290617d6b2c0b4b46163681ea63f1f3dfba790
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 12 16:23:49 2000 +0000
+
+    Updated server example.
+
+commit e7249fa8f8c707354b1a797d0bb7a5d5e1097182
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 12 16:04:17 2000 +0000
+
+    Added comstack method for Yaz_PDU_Assoc..
+
+commit 35cfa3b3d2c9b8adb8c4bfd4c95620929e35466b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 12 12:09:53 2000 +0000
+
+    More work on high-level server.
+
+commit 7842145941670b18deaa257bb3e57d21d71cc90a
+Author: Heikki Levanto <heikki@indexdata.dk>
+Date:   Fri Sep 8 12:50:24 2000 +0000
+
+    Prevented re-inclusion
+
+commit 13e964520ec80db9e5c34fdefea416ba2a794732
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Sep 8 10:45:26 2000 +0000
+
+    Added include headers to project.
+
+commit fc9f9bcff2929ec67910e8b98ecbb578ba2aab6e
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Sep 8 10:31:05 2000 +0000
+
+    Win32 updates.
+
+commit 316df82985a4207a7d52e7d88567bf26d5c2c7c8
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Sep 8 10:23:42 2000 +0000
+
+    Added skeleton of yaz-z-server.
+
+commit eea3cf8293bab09d65bac8d34e16b1a12ed67919
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Sep 6 14:23:45 2000 +0000
+
+    WIN32 updates.
+
+commit 22eeea158d7baa9291b5449304d979c173034f0a
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Sep 5 13:57:28 2000 +0000
+
+    Fixed get_otherInfoAPDU to return otherInfo for extended services.
+
+commit 9e0a9b423b46c3b4f6a247ee29291c376df7554d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 4 08:59:16 2000 +0000
+
+    Changed call to logging functions (yaz_ added).
+
+commit 804e399b3394762e87f54d8b1c6e0fe882f9e03b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 4 08:29:22 2000 +0000
+
+    Fixed memory leak(s). Added re-use of associations, rather than
+    re-init, when maximum number of targets are in use.
+
+commit 79cc3b2b8486f2dec0eb51a932e92ac22d8c0eb2
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Aug 31 14:41:55 2000 +0000
+
+    Proxy no longer generates cookies (it's up to the client). Proxy
+    re-opens if target new op is started before previous operation finishes.
+
+commit 6104ba97908b1292806a1242b65beb0edbf2314f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Aug 10 08:42:42 2000 +0000
+
+    Fixes for {set,get}_APDU_log.
+
+commit 87be6c609c22d9620c781b95ab74298b63694055
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Aug 7 14:19:59 2000 +0000
+
+    Fixed serious bug regarding timeouts. Improved logging for proxy.
+
+commit acd0ff2a7f87fb33a82475dcc7aa44cd7189d4c0
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Jul 4 13:48:49 2000 +0000
+
+    Implemented upper-limit on proxy-to-target sessions.
+
+commit 848aaf80bff6102e377c9cbd2a52679b74102699
+Author: ian <ian>
+Date:   Tue May 30 03:12:27 2000 +0000
+
+    minor change to stop g++ 2.95.2 complaining about taking the address
+    of a member function.
+
+commit 1063240efa2d4f03a72353936e8a7b73ee249b0d
+Author: ian <ian>
+Date:   Wed May 10 11:36:58 2000 +0000
+
+    Added default parameters for refid to request functions.
+    Added default parameter for result set name to search and present request.
+    Commented out forced logging of PDU contents.
+    Added send_deleteResultSetRequest
+
+commit 26b3f7f15abcb69aaf00fb6bdaf410ff3e7de14c
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Dec 6 13:52:45 1999 +0000
+
+    Modified for new location of YAZ header files. Experimental threaded
+    operation.
+
+commit 2e14b1af67a2044e73d024bc29445035910a2dd4
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Nov 10 10:02:34 1999 +0000
+
+    Work on proxy.
+
+commit 66767801433aba6cd2ac9fc744a1057867df7fa9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Sep 13 12:53:44 1999 +0000
+
+    Proxy removes OtherInfo Proxy Address and Session ID. Other
+    Otherinfo remains untouched.
+
+commit f361edf90112718787b14d08975c2419af234a8f
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Mon Jul 12 07:57:27 1999 +0000
+
+    Updated for YAZ.
+
+commit bdcac7907b800a337f95d5bb69b2d1800cc6eef9
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue May 4 10:53:00 1999 +0000
+
+    Changed the way the PROXY behaves when lost cookie is received.
+
+commit eed883761eb8458dafbb760006174d1ab5169a24
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Apr 29 07:33:28 1999 +0000
+
+    Changed setting of host in connect/proxy setting. YAZ' strtoaddr now
+    ignores database part of host.
+
+commit f20c1ac2696ab513770a54af76366bc09aa0e308
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 28 13:31:17 1999 +0000
+
+    Better result set optimisation for proxy.
+
+commit 9978e9dbb05e9a6fe49fa24e1d6bedb63b30997d
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 28 13:29:14 1999 +0000
+
+    Yet another fix regarding database settings.
+
+commit e08f9ff89133cbc295dda92b9c863ddd288569d1
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 28 13:04:03 1999 +0000
+
+    Fixed setting of proxy otherInfo so that database(s) are removed.
+
+commit aa0a53b798b077905644b5d2ef06322463609253
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 28 13:02:08 1999 +0000
+
+    Added include of string.h.
+
+commit 8791979d0ceae761c5eebd576de19fef3216f050
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 27 07:52:13 1999 +0000
+
+    Improved proxy; added query match for result set re-use.
+
+commit 5c45ffbb2b430a6f41277c303a5e9b94242dab96
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Wed Apr 21 12:09:01 1999 +0000
+
+    Many improvements. Modified to proxy server to work with "sessions"
+    based on cookies.
+
+commit 3109185a2036377894be1dd303d899a305b44281
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Apr 20 10:30:05 1999 +0000
+
+    Implemented various stuff for client and proxy. Updated calls
+    to ODR to reflect new name parameter.
+
+commit c6e5ad789740135af3558298f6e2014ae99ee7dd
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Fri Apr 9 11:46:57 1999 +0000
+
+    Added object Yaz_Z_Assoc. Much more functional client.
+
+commit a8063bff74c6d48f7a0aec23c266894777e3134b
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Mar 23 14:17:57 1999 +0000
+
+    More work on timeout handling. Work on yaz-client.
+
+commit cc44793fb69db2885c570cc5de05fda796993bba
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Tue Feb 2 14:01:10 1999 +0000
+
+    First WIN32 port of YAZ++.
+
+commit 97118338f9ac93e767e5589d449d3f9abacb3190
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 28 13:08:39 1999 +0000
+
+    Yaz_PDU_Assoc better encapsulated. Memory leak fix in
+    yaz-socket-manager.cc.
+
+commit 7f8f545aacbf7e7427486d5f060a591ef25d5a58
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 28 10:04:46 1999 +0000
+
+    Minor changes to documentation.
+
+commit bf377ba45c8c1cbcf843fdecc6d5c68fda6bad18
+Author: Adam Dickmeiss <adam@indexdata.dk>
+Date:   Thu Jan 28 09:41:07 1999 +0000
+
+    Initial revision

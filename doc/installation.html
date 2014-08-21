@@ -1,0 +1,80 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 2. Installation</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="prev" href="introduction.html" title="Chapter 1. Introduction"><link rel="next" href="windows.html" title="2. Installation on Windows"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 2. Installation</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="introduction.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="windows.html">Next</a></td></tr></table><hr></div><div class="chapter"><div class="titlepage"><div><div><h1 class="title"><a name="installation"></a>Chapter 2. Installation</h1></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl class="toc"><dt><span class="section"><a href="installation.html#unix">1. Installation on Unix (from source)</a></span></dt><dt><span class="section"><a href="windows.html">2. Installation on Windows</a></span></dt></dl></div><p>
+   You need a C++ compiler to compile and use YAZ++.
+   The software was implemented using <a class="ulink" href="http://gcc.gnu.org" target="_top">GCC</a>
+   so we know that works well with YAZ++. From time to time the
+   software is compiled on Windows using Visual C++.
+   Other compilers should work too. Let us know of portability
+   problems, etc. with your system.
+  </p><p>
+   YAZ++ is built on top of the 
+   <a class="ulink" href="http://www.indexdata.com/yaz" target="_top">YAZ</a>
+   toolkit.
+   You need to install that first.
+   For some platforms there are binary packages for YAZ.
+  </p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="unix"></a>1. Installation on Unix (from source)</h2></div></div></div><p>On UNIX, the software is compiled as follows:
+    </p><pre class="screen">
+     $ ./configure
+     $ make
+     $ su
+     # make install
+    </pre><p>
+   </p><p>
+    You can supply options for the <code class="literal">configure</code> script.
+    The most useful ones are:
+    </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">--prefix </code>directory</span></dt><dd><p>
+        Specifies installation prefix. By default
+        <code class="filename">/usr/local</code> is used.
+       </p></dd><dt><span class="term"><code class="literal">--with-yaz </code>directory</span></dt><dd><p>
+        Specifies the location of <code class="filename">yaz-config</code>.
+        The <code class="filename">yaz-config</code> program is generated in
+        the source directory of YAZ as well as the binaries
+        directory when YAZ is installed (via make install).
+        </p><p>
+        If you don't supply this option, <code class="literal">configure</code> will
+        look for <code class="filename">yaz-config</code> in directories of the
+        <code class="envar">PATH</code> environment - which is nearly always
+        what you want.
+       </p></dd></dl></div><p>
+    For the whole list of <code class="literal">configure</code> options, refer
+    to the help:
+    <code class="literal">./configure --help</code>.
+   </p><p>
+    Configure uses GNU's C/C++ compiler if available. To specify another
+    compiler, set <code class="literal">CXX</code>. To use other compiler flags,
+    specify <code class="literal">CXXFLAGS</code>. To use <code class="literal">CC</code> 
+    with debugging you could use:
+    </p><pre class="screen">
+     CXXFLAGS="-g" CXX=CC ./configure
+    </pre><p>
+   </p><p>
+    This is what you have after successful compilation:
+    </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="filename">src/libyazpp.la</code></span></dt><dd><p>
+        The YAZ++ library.
+	This library gets installed in your libraries directory
+	(<em class="parameter"><code>prefix</code></em><code class="filename">/lib</code>).
+       </p></dd><dt><span class="term"><code class="filename">src/libzoompp.la</code></span></dt><dd><p>
+        The <a class="link" href="zoom.html" title="Chapter 3. ZOOM-C++">ZOOM-C++</a> library.
+	This library gets installed in your libraries directory
+	(<em class="parameter"><code>prefix</code></em><code class="filename">/lib</code>).
+       </p></dd><dt><span class="term"><code class="filename">include/yazpp/*.h</code></span></dt><dd><p>
+        Various C++ header files, which you'll need for YAZ++
+	development. All these are installed in your header files area
+	(<em class="parameter"><code>prefix</code></em><code class="filename">/include/yazpp</code>).
+       </p></dd><dt><span class="term"><code class="filename">yazpp-config</code></span></dt><dd><p>
+        A Bourne shell-script utility that returns the values of the
+	<code class="envar">CFLAGS</code> and <code class="envar">LIBS</code>
+	environment variables
+        needed in order to compile your applications with the YAZ++
+	library.  This script gets installed in your binaries directory
+        (<em class="parameter"><code>prefix</code></em><code class="filename">/bin</code>).
+       </p></dd><dt><span class="term"><code class="filename">zoom/zclient</code></span></dt><dd><p>
+        ZOOM C++ demonstration client that uses the ZOOM C++ classes.
+	This client does not get installed in the system directories.
+       </p></dd><dt><span class="term"><code class="filename">src/yaz-my-client</code></span></dt><dd><p>
+        YAZ C++ demonstration client. This client does not
+        get installed in the system directories.
+       </p></dd><dt><span class="term"><code class="filename">src/yaz-my-server</code></span></dt><dd><p>
+        YAZ C++ demonstration server. This server does not
+        get installed in the system directories.
+       </p></dd></dl></div><p>
+   </p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="introduction.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="windows.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 1. Introduction </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 2. Installation on Windows</td></tr></table></div></body></html>

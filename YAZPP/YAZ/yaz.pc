@@ -1,0 +1,12 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: YAZ
+Version: 5.4.1
+Description: YAZ library.
+Requires: libexslt
+Libs: -L${libdir} -lyaz
+Libs.private: -lxml2 -lxslt  -liconv -lpthread
+Cflags: -I${includedir}  -DYAZ_POSIX_THREADS=1 -DYAZ_HAVE_XML2=1 -DYAZ_HAVE_XSLT=1 -I/usr/include/libxml2

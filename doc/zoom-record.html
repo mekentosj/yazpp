@@ -1,0 +1,94 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>5. ZOOM::record</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="zoom.html" title="Chapter 3. ZOOM-C++"><link rel="prev" href="zoom-resultset.html" title="4. ZOOM::resultSet"><link rel="next" href="zoom-exception.html" title="6. ZOOM::exception and subclasses"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">5. <code class="literal">ZOOM::record</code></th></tr><tr><td width="20%" align="left"><a accesskey="p" href="zoom-resultset.html">Prev</a> </td><th width="60%" align="center">Chapter 3. ZOOM-C++</th><td width="20%" align="right"> <a accesskey="n" href="zoom-exception.html">Next</a></td></tr></table><hr></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="zoom-record"></a>5. <code class="literal">ZOOM::record</code></h2></div></div></div><p>
+   A <code class="literal">ZOOM::record</code> object represents a chunk of data
+   from a <code class="literal">resultSet</code> returned from a server.
+  </p><p>
+   The class has this declaration:
+  </p><pre class="synopsis">
+    class record {
+    public:
+      ~record ();
+      enum syntax {
+	UNKNOWN, GRS1, SUTRS, USMARC, UKMARC, XML
+      };
+      record *clone () const;
+      syntax recsyn () const;
+      const char *render () const;
+      const char *rawdata () const;
+    };
+  </pre><p>
+   Records returned from Z39.50 servers are encoded using a record
+   syntax: the various national MARC formats are commonly used for
+   bibliographic data, GRS-1 or XML for complex structured data, SUTRS
+   for simple human-readable text, etc.  The
+   <code class="literal">record::syntax</code> enumeration specifies constants
+   representing common record syntaxes, and the
+   <code class="literal">recsyn()</code> method returns the value corresponding
+   to the record-syntax of the record on which it is invoked.
+   </p><div class="note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>
+     Because this interface uses an enumeration, it is difficult to
+     extend to other record syntaxes - for example, DANMARC, the MARC
+     variant widely used in Denmark.  We might either grow the
+     enumeration substantially, or change the interface to return
+     either an integer or a string.
+    </p></div><p>
+  </p><p>
+   The simplest thing to do with a retrieved record is simply to
+   <code class="literal">render()</code> it.  This returns a human-readable, but
+   not necessarily very pretty, representation of the contents of the
+   record.  This is useful primarily for testing and debugging, since
+   the application has no control over how the record appears.
+   (The application must <span class="emphasis"><em>not</em></span>
+   <code class="literal">delete</code> the returned string - it is ``owned'' by
+   the record object.)
+  </p><p>
+   More sophisticated applications will want to deal with the raw data
+   themselves: the <code class="literal">rawdata()</code> method returns it.
+   Its format will vary depending on the record syntax: SUTRS, MARC
+   and XML records are returned ``as is'', and GRS-1 records as a
+   pointer to their top-level node, which is a
+   <code class="literal">Z_GenericRecord</code> structure as defined in the
+   <code class="literal">&lt;yaz/z-grs.h&gt;</code> header file.
+   (The application must <span class="emphasis"><em>not</em></span>
+   <code class="literal">delete</code> the returned data - it is ``owned'' by
+   the record object.)
+  </p><p>
+   Perceptive readers will notice that there are no methods for access
+   to individual fields within a record.  That's because the different
+   record syntaxes are so different that there is no even a uniform
+   notion of what a field is across them all, let alone a sensible way
+   to implement such a function.  Fetch the raw data instead, and pick
+   it apart ``by hand''.
+  </p><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="zoom.memory.management"></a>5.1. Memory Management</h3></div></div></div><p>
+    The <code class="literal">record</code> objects returned from
+    <code class="literal">resultSet::getRecord()</code> are ``owned'' by the
+    result set object: that means that the application is not
+    responsible for <code class="literal">delete</code>ing them - each
+    <code class="literal">record</code> is automatically deallocated when the
+    <code class="literal">resultSet</code> that owns it is
+    <code class="literal">delete</code>d.
+   </p><p>
+    Usually that's what you want: it means that you can easily fetch a
+    record, use it and forget all about it, like this:
+   </p><pre class="programlisting">
+    resultSet rs(conn, query);
+    cout &lt;&lt; rs.getRecord(0)-&gt;render();
+   </pre><p>
+    But sometimes you want a <code class="literal">record</code> to live on past
+    the lifetime of the <code class="literal">resultSet</code> from which it was
+    fetched.  In this case, the <code class="literal">clone(f)</code> method can
+    be used to make an autonomous copy.  The application must
+    <code class="literal">delete</code> it when it doesn't need it any longer:
+   </p><pre class="programlisting">
+    record *rec;
+    {
+        resultSet rs(conn, query);
+        rec = rs.getRecord(0)-&gt;clone();
+        // `rs' goes out of scope here, and is deleted
+    }
+    cout &lt;&lt; rec-&gt;render();
+    delete rec;
+   </pre></div><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="record.references"></a>5.2. References</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+      <a class="ulink" href="http://zoom.z3950.org/api/zoom-1.3.html#3.5" target="_top">Section 3.5 (Record) of the ZOOM Abstract API</a>
+     </p></li><li class="listitem"><p>
+      <a class="ulink" href="http://www.indexdata.com/yaz/doc/zoom.records.html" target="_top">The Records section of the ZOOM-C documentation</a>
+     </p></li></ul></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="zoom-resultset.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="zoom.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="zoom-exception.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">4. <code class="literal">ZOOM::resultSet</code> </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 6. <code class="literal">ZOOM::exception</code> and subclasses</td></tr></table></div></body></html>

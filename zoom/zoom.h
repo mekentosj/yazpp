@@ -1,0 +1,153 @@
+// ZOOM C++ Binding.
+// The ZOOM homepage is at http://zoom.z3950.org/
+//
+// Derived from version 1.3a at
+//	http://zoom.z3950.org/bind/cplusplus/zoom-1.3a.hh
+
+#include <stddef.h>		// for size_t
+#include <string>
+
+
+ /*
+  * This is a bit stupid.  The fact that our ZOOM-C++ implementation is
+  * based on the ZOOM-C implementation is our Dirty Little Secret, and
+  * there is in principle no reason why client code need be bothered
+  * with it.  Except of course that the public class declarations in
+  * C++ have to lay their private parts out for the world to see
+  * (oo-er).  Hence the inclusion of <yaz/zoom.h>
+  */
+ #include <yaz/zoom.h>
+ 
+namespace ZOOM {
+  // Forward declarations for type names.
+  class YAZ_EXPORT query;
+  class YAZ_EXPORT resultSet;
+  class YAZ_EXPORT record;
+
+  class YAZ_EXPORT connection {
+    ZOOM_connection c;
+    friend class resultSet; // so it can use _getYazConnection()
+    ZOOM_connection _getYazConnection () const { return c; }
+    // connections are non-copyable.
+    connection (const connection &);
+    connection &operator= (const connection &);
+  public:
+    connection ();
+    connection (const std::string &hostname, int portnum);
+    ~connection ();
+    void connect (const std::string &hostname, int portnum);
+    std::string option (const std::string &key) const;
+    bool option (const std::string &key, const std::string &val);
+  };
+
+  class query {
+      // base class for all query types
+    friend class resultSet; // so it can use _getYazQuery()
+    ZOOM_query _getYazQuery () const { return q; }
+  protected:
+    ZOOM_query q;
+  public:
+    query ();
+    virtual ~query ();
+  };
+
+  class YAZ_EXPORT prefixQuery : public query {
+  public:
+    prefixQuery (const std::string &pqn);
+    ~prefixQuery ();
+  };
+
+  class YAZ_EXPORT CCLQuery : public query {
+  public:
+    CCLQuery (const std::string &ccl, void *qualset);
+    ~CCLQuery ();
+  };
+
+  class YAZ_EXPORT resultSet {
+    connection &owner;
+    ZOOM_resultset rs;
+    friend class record; // for _getYazResultSet() & _getYazConnection()
+    ZOOM_resultset _getYazResultSet () const { return rs; }
+    ZOOM_connection _getYazConnection () const {
+	return owner._getYazConnection(); }
+    // resultSets are non-copyable.
+    resultSet (const resultSet &);
+    resultSet &operator= (const resultSet &);
+  public:
+    resultSet (connection &c, const query &q);
+    ~resultSet ();
+    std::string option (const std::string &key) const;
+    bool option (const std::string &key, const std::string &val);
+    size_t size () const;
+  };
+
+  class YAZ_EXPORT record {
+    const resultSet &owner;
+    ZOOM_record r;
+  public:
+    class YAZ_EXPORT syntax {
+    public:
+      enum value {
+	UNKNOWN, GRS1, SUTRS, USMARC, UKMARC, XML
+      };
+    private:
+      enum value val;
+    public:
+      syntax (value rs);
+      operator std::string () const;
+      bool operator== (const syntax &s) const;
+      bool operator== (value rs) const;
+      operator value () const;
+    };
+
+    record (resultSet &rs, size_t num);
+    ~record ();
+    syntax recsyn () const;
+    std::string render () const;
+    std::string rawdata () const;
+  };
+
+  // Base exception class; from which all other ZOOM exceptions
+  // are derived. Other classes that use this as their base
+  // class may want to provide their own errcode() and errmsg()
+  // functions -- hence they are made virtual.
+  class YAZ_EXPORT exception {
+  protected:
+    int code;
+  public:
+    exception (int code);
+    virtual ~exception ();
+    virtual int errcode () const;
+    virtual std::string errmsg () const;
+  };
+
+  // systemException could be thrown for timeouts, protocol errors,
+  // network outages.
+  class YAZ_EXPORT systemException : public exception {
+  public:
+    systemException ();		// Uses value of system `errno'
+    systemException (int code);
+    virtual std::string errmsg () const; // Why do I have to repeat this?
+  };
+
+  // bib1Exception::errcode() returns a code from the
+  // Bib-1 Diagnostic Set.
+  class YAZ_EXPORT bib1Exception: public exception {
+    std::string info;
+  public:
+    ~bib1Exception ();
+    bib1Exception (int code, const std::string &addinfo);
+    virtual std::string errmsg () const; // Why do I have to repeat this?
+    std::string addinfo () const;
+  };
+
+  class YAZ_EXPORT queryException : public exception {
+    std::string q;
+  public:
+    ~queryException ();
+    enum { PREFIX, CCL };
+    queryException (int qtype, const std::string &source);
+    virtual std::string errmsg () const; // Why do I have to repeat this?
+    std::string addinfo () const;
+  };
+}

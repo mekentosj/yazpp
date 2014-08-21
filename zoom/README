@@ -1,0 +1,25 @@
+This is an initial implementation of the ZOOM C++ binding
+(http://zoom.z3950.org/bind/cplusplus/) for the Yaz toolkit.
+It's a rather obvious thin layer on top of Yaz's ZOOM-C
+implementation.
+
+Only one wrinkle, really: we want the ZOOM C++ header file for two
+different purposes: one is to function as an interface specification
+that can go on the ZOOM web-site, and one is to actually build
+against.  The requirements of these two manifestations of the header
+file are rather different in that the latter needs to include
+implementation details that the former very explicitly does _not_
+want.  Accordingly, we automatically generate both versions from a
+master copy in which the implementation-dependent lines are preceded
+by asterisks ("*").  So we have:
+
+	master-header	The master copy, which may be edited.
+	interface.h	The read-only, automatically-generated file
+			that can be considered a formal specification
+			of the ZOOM C++ interface.
+	zoom.h		The read-only, automatically-generated file
+			that is actually used in the build process,
+			and ultimately installed into
+			../include/yaz++/zoom.h
+
+Documentation (in DocBook format) is in "../doc/zoom.xml"

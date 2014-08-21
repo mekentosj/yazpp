@@ -1,0 +1,40 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2. ZOOM::connection</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="zoom.html" title="Chapter 3. ZOOM-C++"><link rel="prev" href="zoom.html" title="Chapter 3. ZOOM-C++"><link rel="next" href="zoom-query.html" title="3. ZOOM::query and subclasses"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2. <code class="literal">ZOOM::connection</code></th></tr><tr><td width="20%" align="left"><a accesskey="p" href="zoom.html">Prev</a> </td><th width="60%" align="center">Chapter 3. ZOOM-C++</th><td width="20%" align="right"> <a accesskey="n" href="zoom-query.html">Next</a></td></tr></table><hr></div><div class="sect1"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="zoom-connection"></a>2. <code class="literal">ZOOM::connection</code></h2></div></div></div><p>
+   A <code class="literal">ZOOM::connection</code> object represents an open
+   connection to a Z39.50 server.  Such a connection is forged by
+   constructing a <code class="literal">connection</code> object.
+  </p><p>
+   The class has this declaration:
+  </p><pre class="synopsis">
+    class connection {
+    public:
+      connection (const char *hostname, int portnum);
+      ~connection ();
+      const char *option (const char *key) const;
+      const char *option (const char *key, const char *val);
+    };
+  </pre><p>
+   When a new <code class="literal">connection</code> is created, the hostname
+   and port number of a Z39.50 server must be supplied, and the
+   network connection is forged and wrapped in the new object.  If the
+   connection can't be established - perhaps because the hostname
+   couldn't be resolved, or there is no server listening on the
+   specified port - then an
+   <a class="link" href="zoom-exception.html" title="6. ZOOM::exception and subclasses"><code class="literal">exception</code></a>
+   is thrown.
+  </p><p>
+   The only other methods on a <code class="literal">connection</code> object
+   are for getting and setting options.  Any name-value pair of
+   strings may be set as options, and subsequently retrieved, but
+   certain options have special meanings which are understood by the
+   ZOOM code and affect the behaviour of the object that carries
+   them.  For example, the value of the
+   <code class="literal">databaseName</code> option is used as the name of the
+   database to query when a search is executed against the
+   <code class="literal">connection</code>.  For a full list of such special
+   options, see the ZOOM abstract API and the ZOOM-C documentation
+   (links below).
+  </p><div class="sect2"><div class="titlepage"><div><div><h3 class="title"><a name="connection.references"></a>2.1. References</h3></div></div></div><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem"><p>
+      <a class="ulink" href="http://zoom.z3950.org/api/zoom-1.3.html#3.2" target="_top">Section 3.2 (Connection) of the ZOOM Abstract API</a>
+      </p></li><li class="listitem"><p>
+       <a class="ulink" href="http://www.indexdata.com/yaz/doc/zoom.html#zoom.connections" target="_top">The Connections section f the ZOOM-C documentation</a>
+      </p></li></ul></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="zoom.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="zoom.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="zoom-query.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. ZOOM-C++ </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> 3. <code class="literal">ZOOM::query</code> and subclasses</td></tr></table></div></body></html>

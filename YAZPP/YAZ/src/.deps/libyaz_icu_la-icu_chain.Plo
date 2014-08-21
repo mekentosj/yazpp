@@ -1,0 +1,3 @@
+libyaz_icu_la-icu_chain.lo: icu_chain.c ../include/config.h
+
+../include/config.h:

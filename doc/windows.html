@@ -1,0 +1,61 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2. Installation on Windows</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="installation.html" title="Chapter 2. Installation"><link rel="prev" href="installation.html" title="Chapter 2. Installation"><link rel="next" href="zoom.html" title="Chapter 3. ZOOM-C++"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2. Installation on Windows</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="installation.html">Prev</a> </td><th width="60%" align="center">Chapter 2. Installation</th><td width="20%" align="right"> <a accesskey="n" href="zoom.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="windows"></a>2. Installation on Windows</h2></div></div></div><p>
+    YAZ++ is shipped with "makefiles" for the NMAKE tool that comes
+    with <a class="ulink" href="http://msdn.microsoft.com/vstudio/" target="_top">Microsoft Visual Studio</a>.
+    Version 2003 (7) and 2005 (8) has been tested.
+    We expect that YAZ++ compiles with versions 5 and 6 as well.
+   </p><p>
+    Start a command prompt and switch the sub directory
+    <code class="filename">WIN</code> where the file <code class="filename">makefile</code>
+    is located. Customize the installation by editing the
+    <code class="filename">makefile</code> file (for example by using notepad).
+    
+    The following summarizes the most important settings in that file:
+    
+    </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="literal">DEBUG</code></span></dt><dd><p>
+	If set to 1, the software is
+	compiled with debugging libraries (code generation is
+	multi-threaded debug DLL).
+	If set to 0, the software is compiled with release libraries
+	(code generation is multi-threaded DLL).
+       </p></dd><dt><span class="term"><code class="filename">YAZ_DIR</code></span></dt><dd><p>
+	Specifies the directory of the YAZ source.
+       </p></dd></dl></div><p>
+   </p><p>
+    When satisfied with the settings in the makefile, type
+    </p><pre class="screen">
+     nmake
+    </pre><p>
+   </p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Tip</h3><p>
+     If the <code class="filename">nmake</code> command is not found on your system
+     you probably haven't defined the environment variables required to
+     use that tool. To fix that, find and run the batch file
+     <code class="filename">vcvars32.bat</code>. You need to run it from within
+     the command prompt or set the environment variables "globally";
+     otherwise it doesn't work.
+    </p></div><p>
+    If you wish to recompile YAZ++ - for example if you modify
+    settings in the <code class="filename">makefile</code> you can delete
+    object files, etc by running.
+    </p><pre class="screen">
+     nmake clean
+    </pre><p>
+   </p><p>
+    The following files are generated upon successful compilation:
+    
+    </p><div class="variablelist"><dl class="variablelist"><dt><span class="term"><code class="filename">bin/yazpp5.dll</code></span></dt><dd><p>
+	YAZ++ DLL . Includes ZOOM C++ as well.
+	For the debug version <code class="filename">lib/yazpp5d.dll</code>
+	is created instead.
+       </p></dd><dt><span class="term"><code class="filename">lib/yazpp5.lib</code></span></dt><dd><p>
+	Import library for <code class="filename">yazpp5.dll</code>.
+	For the debug version <code class="filename">lib/yazpp5d.lib</code>
+	is created instead.
+       </p></dd><dt><span class="term"><code class="filename">bin/yaz-my-client.exe</code></span></dt><dd><p>
+	Z39.50 client demonstrating the YAZ++ API.
+       </p></dd><dt><span class="term"><code class="filename">bin/yaz-my-server.exe</code></span></dt><dd><p>
+	Z39.50 server demonstrating the YAZ++ API.
+       </p></dd><dt><span class="term"><code class="filename">bin/zclient.exe</code></span></dt><dd><p>
+	ZOOM C++ demo client. A simple WIN32 console application.
+       </p></dd></dl></div><p>
+    
+   </p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="installation.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="installation.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="zoom.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 2. Installation </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 3. ZOOM-C++</td></tr></table></div></body></html>

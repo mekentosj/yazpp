@@ -1,0 +1,167 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>2. Implementations</title><meta name="generator" content="DocBook XSL Stylesheets V1.78.1"><link rel="home" href="index.html" title="YAZ++ User's Guide and Reference"><link rel="up" href="api.html" title="Chapter 4. YAZ C++ API"><link rel="prev" href="api.html" title="Chapter 4. YAZ C++ API"><link rel="next" href="license.html" title="Appendix A. License"></head><body><link rel="stylesheet" type="text/css" href="common/style1.css"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">2. Implementations</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="api.html">Prev</a> </td><th width="60%" align="center">Chapter 4. YAZ C++ API</th><td width="20%" align="right"> <a accesskey="n" href="license.html">Next</a></td></tr></table><hr></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="implementations"></a>2. Implementations</h2></div></div></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="Yaz_SocketManager"></a>2.1. Yaz_SocketManager</h3></div></div></div><p>
+     This class implements the <a class="link" href="api.html#ISocketObservable" title="1.1. ISocketObservable">
+      ISocketObservable</a> interface and is a portable 
+     socket wrapper around the select call.
+     This implementation is useful for daemons,
+     command line clients, etc.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/socket-manager.h&gt;
+
+     class SocketManager : public ISocketObservable {
+       public:
+         // Add an observer
+         virtual void addObserver(int fd, ISocketObserver *observer);
+         // Delete an observer
+         virtual void deleteObserver(ISocketObserver *observer);
+         // Delete all observers
+         virtual void deleteObservers();
+         // Set event mask for observer
+         virtual void maskObserver(ISocketObserver *observer, int mask);
+         // Set timeout
+         virtual void timeoutObserver(ISocketObserver *observer,
+                                  unsigned timeout);
+         // Process one event. return &gt; 0 if event could be processed;
+         int processEvent();
+         SocketManager();
+         virtual ~SocketManager();
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="PDU_Assoc"></a>2.2. PDU_Assoc</h3></div></div></div><p>
+     This class implements the interfaces
+     <a class="link" href="api.html#IPDU_Observable" title="1.3. IPDU_Observable">IPDU_Observable</a>
+     and
+     <a class="link" href="api.html#ISocketObserver" title="1.2. ISocketObserver">ISocketObserver</a>.
+     This object implements a non-blocking client/server channel
+     that transmits BER encoded PDUs (or those offered by YAZ COMSTACK).
+    </p><pre class="synopsis">
+     #include &lt;yazpp/pdu-assoc.h&gt;
+
+     class PDU_Assoc : public IPDU_Observable,
+                                 ISocketObserver {
+     
+       public:
+         COMSTACK comstack(const char *type_and_host, void **vp);
+         // Create object using specified socketObservable
+         PDU_Assoc(ISocketObservable *socketObservable);
+         // Create Object using existing comstack
+         PDU_Assoc(ISocketObservable *socketObservable,
+                  COMSTACK cs);
+         // Close socket and destroy object.
+         virtual ~PDU_Assoc();
+         // Clone the object
+         IPDU_Observable *clone();
+         // Send PDU
+         int send_PDU(const char *buf, int len);
+         // connect to server (client role)
+         void connect(IPDU_Observer *observer, const char *addr);
+         // listen for clients (server role)
+         void listen(IPDU_Observer *observer, const char *addr);
+         // Socket notification
+         void socketNotify(int event);
+         // Close socket
+         void close();
+         // Close and destroy
+         void destroy();
+         // Set Idle Time
+         void idleTime (int timeout);
+         // Child start...
+         virtual void childNotify(COMSTACK cs);
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="Z_Assoc"></a>2.3. Z_Assoc</h3></div></div></div><p>
+     This class implements the interface
+     <a class="link" href="api.html#IPDU_Observer" title="1.4. IPDU_Observer">IPDU_Obserer</a>.
+     This object implements a Z39.50 client/server channel AKA
+     Z-Association.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/z-assoc.h&gt;
+     
+     class Z_Assoc : public IPDU_Observer {
+       public:
+         // Create object using the PDU Observer specified
+         Z_Assoc(IPDU_Observable *the_PDU_Observable);
+         // Destroy association and close PDU Observer
+         virtual ~Z_Assoc();
+         // Receive PDU
+         void recv_PDU(const char *buf, int len);
+         // Connect notification
+         virtual void connectNotify() = 0;
+         // Failure notification
+         virtual void failNotify() = 0;
+         // Timeout notification
+         virtual void timeoutNotify() = 0;
+         // Timeout specify
+         void timeout(int timeout);
+         // Begin Z39.50 client role
+         void client(const char *addr);
+         // Begin Z39.50 server role
+         void server(const char *addr);
+         // Close connection
+         void close();
+
+         // Decode Z39.50 PDU.
+         Z_APDU *decode_Z_PDU(const char *buf, int len);
+         // Encode Z39.50 PDU.
+         int encode_Z_PDU(Z_APDU *apdu, char **buf, int *len);
+         // Send Z39.50 PDU
+         int send_Z_PDU(Z_APDU *apdu);
+         // Receive Z39.50 PDU
+         virtual void recv_Z_PDU(Z_APDU *apdu) = 0;
+         // Create Z39.50 PDU with reasonable defaults
+         Z_APDU *create_Z_PDU(int type);
+         // Request Alloc
+         ODR odr_encode ();
+         ODR odr_decode ();
+         ODR odr_print ();
+         void set_APDU_log(const char *fname);
+         const char *get_APDU_log();
+
+         // OtherInformation
+         void get_otherInfoAPDU(Z_APDU *apdu, Z_OtherInformation ***oip);
+         Z_OtherInformationUnit *update_otherInformation (
+               Z_OtherInformation **otherInformationP, int createFlag,
+               int *oid, int categoryValue, int deleteFlag);
+         void set_otherInformationString (
+               Z_OtherInformation **otherInformationP,
+               int *oid, int categoryValue,
+               const char *str);
+         void set_otherInformationString (
+               Z_OtherInformation **otherInformation,
+               int oidval, int categoryValue,
+               const char *str);
+         void set_otherInformationString (
+               Z_APDU *apdu,
+               int oidval, int categoryValue,
+               const char *str);
+
+         Z_ReferenceId *getRefID(char* str);
+         Z_ReferenceId **get_referenceIdP(Z_APDU *apdu);
+         void transfer_referenceId(Z_APDU *from, Z_APDU *to);
+
+         const char *get_hostname();
+     };
+    </pre></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="IR_Assoc"></a>2.4. IR_Assoc</h3></div></div></div><p>
+     This object is just a specialization of 
+     <a class="link" href="implementations.html#Z_Assoc" title="2.3. Z_Assoc">Z_Assoc</a> and provides
+     more facilities for the Z39.50 client role.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/ir-assoc.h&gt;
+
+     class IR_Assoc : public Z_Assoc {
+       ...
+     };
+    </pre><p>
+     The example client, <code class="filename">yaz-my-client.cpp</code>,
+     uses this class.
+    </p></div><div class="section"><div class="titlepage"><div><div><h3 class="title"><a name="Z_Server"></a>2.5. Z_Server</h3></div></div></div><p>
+     This object is just a specialization of 
+     <a class="link" href="implementations.html#Z_Assoc" title="2.3. Z_Assoc">Z_Assoc</a> and provides
+     more facilities for the Z39.50 server role.
+    </p><pre class="synopsis">
+     #include &lt;yazpp/z-server.h&gt;
+
+     class My_Server : public Z_Server {
+       ...
+     };
+    </pre><p>
+     The example server, <code class="filename">yaz-my-server.cpp</code>,
+     uses this class.
+    </p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="api.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="api.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="license.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 4. YAZ C++ API </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Appendix A. License</td></tr></table></div></body></html>
