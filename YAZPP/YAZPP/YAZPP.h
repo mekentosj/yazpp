@@ -16,4 +16,6 @@ FOUNDATION_EXPORT const unsigned char YAZPPVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <YAZPP/PublicHeader.h>
 
-
+#import <YAZPP/socket-manager.h>
+#import <YAZPP/pdu-assoc.h>
+#import <YAZPP/yaz-my-client.h>

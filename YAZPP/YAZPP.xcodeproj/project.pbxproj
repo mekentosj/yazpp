@@ -251,6 +251,24 @@
 		5F580A6519A6716D00D4D627 /* zoom-sru.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F58097319A6716D00D4D627 /* zoom-sru.c */; };
 		5F580A6619A6716D00D4D627 /* zoom-z3950.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F58097419A6716D00D4D627 /* zoom-z3950.c */; };
 		5F580A6D19A6A18100D4D627 /* YAZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F58086A19A670FD00D4D627 /* YAZ.framework */; };
+		5F580AA319A6AD1700D4D627 /* yaz-my-client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5F58083D19A66FA600D4D627 /* yaz-my-client.cpp */; };
+		5F580AA519A6AE3A00D4D627 /* yaz-my-client.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AA419A6AE3A00D4D627 /* yaz-my-client.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AB619A6B26200D4D627 /* cql2rpn.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AA619A6B26100D4D627 /* cql2rpn.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AB719A6B26200D4D627 /* gdu.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AA719A6B26100D4D627 /* gdu.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AB819A6B26200D4D627 /* gduqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AA819A6B26100D4D627 /* gduqueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AB919A6B26200D4D627 /* ir-assoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AA919A6B26100D4D627 /* ir-assoc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABA19A6B26200D4D627 /* limit-connect.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAA19A6B26100D4D627 /* limit-connect.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABB19A6B26200D4D627 /* pdu-assoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAB19A6B26100D4D627 /* pdu-assoc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABC19A6B26200D4D627 /* pdu-observer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAC19A6B26100D4D627 /* pdu-observer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABD19A6B26200D4D627 /* query.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAD19A6B26100D4D627 /* query.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABE19A6B26200D4D627 /* record-cache.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAE19A6B26100D4D627 /* record-cache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580ABF19A6B26200D4D627 /* socket-manager.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AAF19A6B26100D4D627 /* socket-manager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC019A6B26200D4D627 /* socket-observer.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB019A6B26200D4D627 /* socket-observer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC119A6B26200D4D627 /* timestat.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB119A6B26200D4D627 /* timestat.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC219A6B26200D4D627 /* z-assoc.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB219A6B26200D4D627 /* z-assoc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC319A6B26200D4D627 /* z-databases.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB319A6B26200D4D627 /* z-databases.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC419A6B26200D4D627 /* z-query.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB419A6B26200D4D627 /* z-query.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F580AC519A6B26200D4D627 /* z-server.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F580AB519A6B26200D4D627 /* z-server.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -558,6 +576,23 @@
 		5F58097219A6716D00D4D627 /* zoom-socket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "zoom-socket.c"; path = "src/zoom-socket.c"; sourceTree = "<group>"; };
 		5F58097319A6716D00D4D627 /* zoom-sru.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "zoom-sru.c"; path = "src/zoom-sru.c"; sourceTree = "<group>"; };
 		5F58097419A6716D00D4D627 /* zoom-z3950.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = "zoom-z3950.c"; path = "src/zoom-z3950.c"; sourceTree = "<group>"; };
+		5F580AA419A6AE3A00D4D627 /* yaz-my-client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "yaz-my-client.h"; sourceTree = "<group>"; };
+		5F580AA619A6B26100D4D627 /* cql2rpn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cql2rpn.h; path = ../include/yazpp/cql2rpn.h; sourceTree = "<group>"; };
+		5F580AA719A6B26100D4D627 /* gdu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gdu.h; path = ../include/yazpp/gdu.h; sourceTree = "<group>"; };
+		5F580AA819A6B26100D4D627 /* gduqueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = gduqueue.h; path = ../include/yazpp/gduqueue.h; sourceTree = "<group>"; };
+		5F580AA919A6B26100D4D627 /* ir-assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ir-assoc.h"; path = "../include/yazpp/ir-assoc.h"; sourceTree = "<group>"; };
+		5F580AAA19A6B26100D4D627 /* limit-connect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "limit-connect.h"; path = "../include/yazpp/limit-connect.h"; sourceTree = "<group>"; };
+		5F580AAB19A6B26100D4D627 /* pdu-assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "pdu-assoc.h"; path = "../include/yazpp/pdu-assoc.h"; sourceTree = "<group>"; };
+		5F580AAC19A6B26100D4D627 /* pdu-observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "pdu-observer.h"; path = "../include/yazpp/pdu-observer.h"; sourceTree = "<group>"; };
+		5F580AAD19A6B26100D4D627 /* query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = query.h; path = ../include/yazpp/query.h; sourceTree = "<group>"; };
+		5F580AAE19A6B26100D4D627 /* record-cache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "record-cache.h"; path = "../include/yazpp/record-cache.h"; sourceTree = "<group>"; };
+		5F580AAF19A6B26100D4D627 /* socket-manager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "socket-manager.h"; path = "../include/yazpp/socket-manager.h"; sourceTree = "<group>"; };
+		5F580AB019A6B26200D4D627 /* socket-observer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "socket-observer.h"; path = "../include/yazpp/socket-observer.h"; sourceTree = "<group>"; };
+		5F580AB119A6B26200D4D627 /* timestat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = timestat.h; path = ../include/yazpp/timestat.h; sourceTree = "<group>"; };
+		5F580AB219A6B26200D4D627 /* z-assoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "z-assoc.h"; path = "../include/yazpp/z-assoc.h"; sourceTree = "<group>"; };
+		5F580AB319A6B26200D4D627 /* z-databases.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "z-databases.h"; path = "../include/yazpp/z-databases.h"; sourceTree = "<group>"; };
+		5F580AB419A6B26200D4D627 /* z-query.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "z-query.h"; path = "../include/yazpp/z-query.h"; sourceTree = "<group>"; };
+		5F580AB519A6B26200D4D627 /* z-server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "z-server.h"; path = "../include/yazpp/z-server.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -598,6 +633,7 @@
 		5F58080B19A66F8300D4D627 = {
 			isa = PBXGroup;
 			children = (
+				5F580AC619A6B2DE00D4D627 /* Include */,
 				5F58081719A66F8300D4D627 /* YAZPP */,
 				5F58082419A66F8400D4D627 /* YAZPPTests */,
 				5F58086B19A670FD00D4D627 /* YAZ */,
@@ -633,6 +669,7 @@
 				5F58083A19A66FA600D4D627 /* yaz-cql2rpn.cpp */,
 				5F58083B19A66FA600D4D627 /* yaz-ir-assoc.cpp */,
 				5F58083C19A66FA600D4D627 /* yaz-marc-sample.cpp */,
+				5F580AA419A6AE3A00D4D627 /* yaz-my-client.h */,
 				5F58083D19A66FA600D4D627 /* yaz-my-client.cpp */,
 				5F58083E19A66FA600D4D627 /* yaz-my-server.cpp */,
 				5F58083F19A66FA600D4D627 /* yaz-pdu-assoc-thread.cpp */,
@@ -953,6 +990,29 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		5F580AC619A6B2DE00D4D627 /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				5F580AA619A6B26100D4D627 /* cql2rpn.h */,
+				5F580AA719A6B26100D4D627 /* gdu.h */,
+				5F580AA819A6B26100D4D627 /* gduqueue.h */,
+				5F580AA919A6B26100D4D627 /* ir-assoc.h */,
+				5F580AAA19A6B26100D4D627 /* limit-connect.h */,
+				5F580AAB19A6B26100D4D627 /* pdu-assoc.h */,
+				5F580AAC19A6B26100D4D627 /* pdu-observer.h */,
+				5F580AAD19A6B26100D4D627 /* query.h */,
+				5F580AAE19A6B26100D4D627 /* record-cache.h */,
+				5F580AAF19A6B26100D4D627 /* socket-manager.h */,
+				5F580AB019A6B26200D4D627 /* socket-observer.h */,
+				5F580AB119A6B26200D4D627 /* timestat.h */,
+				5F580AB219A6B26200D4D627 /* z-assoc.h */,
+				5F580AB319A6B26200D4D627 /* z-databases.h */,
+				5F580AB419A6B26200D4D627 /* z-query.h */,
+				5F580AB519A6B26200D4D627 /* z-server.h */,
+			);
+			name = Include;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -960,7 +1020,24 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F580AC019A6B26200D4D627 /* socket-observer.h in Headers */,
+				5F580ABB19A6B26200D4D627 /* pdu-assoc.h in Headers */,
+				5F580AC319A6B26200D4D627 /* z-databases.h in Headers */,
+				5F580ABD19A6B26200D4D627 /* query.h in Headers */,
+				5F580AC119A6B26200D4D627 /* timestat.h in Headers */,
+				5F580ABC19A6B26200D4D627 /* pdu-observer.h in Headers */,
+				5F580AB619A6B26200D4D627 /* cql2rpn.h in Headers */,
+				5F580AA519A6AE3A00D4D627 /* yaz-my-client.h in Headers */,
+				5F580ABA19A6B26200D4D627 /* limit-connect.h in Headers */,
+				5F580ABE19A6B26200D4D627 /* record-cache.h in Headers */,
 				5F58081B19A66F8300D4D627 /* YAZPP.h in Headers */,
+				5F580AC419A6B26200D4D627 /* z-query.h in Headers */,
+				5F580AB919A6B26200D4D627 /* ir-assoc.h in Headers */,
+				5F580AB819A6B26200D4D627 /* gduqueue.h in Headers */,
+				5F580AC219A6B26200D4D627 /* z-assoc.h in Headers */,
+				5F580AB719A6B26200D4D627 /* gdu.h in Headers */,
+				5F580AC519A6B26200D4D627 /* z-server.h in Headers */,
+				5F580ABF19A6B26200D4D627 /* socket-manager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1144,6 +1221,7 @@
 				5F58085A19A66FA600D4D627 /* yaz-pdu-assoc.cpp in Sources */,
 				5F58084D19A66FA600D4D627 /* limit-connect.cpp in Sources */,
 				5F58085F19A66FA600D4D627 /* yaz-z-query.cpp in Sources */,
+				5F580AA319A6AD1700D4D627 /* yaz-my-client.cpp in Sources */,
 				5F58085C19A66FA600D4D627 /* yaz-z-assoc.cpp in Sources */,
 				5F58086219A66FA600D4D627 /* yaz-z-server-update.cpp in Sources */,
 				5F58085919A66FA600D4D627 /* yaz-pdu-assoc-thread.cpp in Sources */,
@@ -1694,6 +1772,7 @@
 				5F58082D19A66F8400D4D627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F58082E19A66F8400D4D627 /* Build configuration list for PBXNativeTarget "YAZPPTests" */ = {
 			isa = XCConfigurationList;
@@ -1702,6 +1781,7 @@
 				5F58083019A66F8400D4D627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F58087D19A670FD00D4D627 /* Build configuration list for PBXNativeTarget "YAZ" */ = {
 			isa = XCConfigurationList;
@@ -1710,6 +1790,7 @@
 				5F58087F19A670FD00D4D627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F58088019A670FD00D4D627 /* Build configuration list for PBXNativeTarget "YAZTests" */ = {
 			isa = XCConfigurationList;
@@ -1718,6 +1799,7 @@
 				5F58088219A670FD00D4D627 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
